@@ -22,13 +22,112 @@ public interface SmallumlFactory extends EFactory {
 	SmallumlFactory eINSTANCE = smalluml.impl.SmallumlFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Class</em>'.
+	 * Returns a new object of class '<em>Classe</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Class</em>'.
+	 * @return a new object of class '<em>Classe</em>'.
 	 * @generated
 	 */
-	Class createClass();
+	Classe createClasse();
+
+	/**
+	 * Returns a new object of class '<em>Attribut</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Attribut</em>'.
+	 * @generated
+	 */
+	Attribut createAttribut();
+
+	/**
+	 * Returns a new object of class '<em>Enumeration</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Enumeration</em>'.
+	 * @generated
+	 */
+	Enumeration createEnumeration();
+
+	/**
+	 * Returns a new object of class '<em>Methode</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Methode</em>'.
+	 * @generated
+	 */
+	Methode createMethode();
+
+	/**
+	 * Returns a new object of class '<em>Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Type</em>'.
+	 * @generated
+	 */
+	Type createType();
+
+	/**
+	 * Returns a new object of class '<em>Type Donnee</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Type Donnee</em>'.
+	 * @generated
+	 */
+	TypeDonnee createTypeDonnee();
+
+	/**
+	 * Returns a new object of class '<em>Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Element</em>'.
+	 * @generated
+	 */
+	Element createElement();
+
+	/**
+	 * Returns a new object of class '<em>Association</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Association</em>'.
+	 * @generated
+	 */
+	Association createAssociation();
+
+	/**
+	 * Returns a new object of class '<em>Cardinalite</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Cardinalite</em>'.
+	 * @generated
+	 */
+	Cardinalite createCardinalite();
+
+	/**
+	 * Returns a new object of class '<em>Chaine</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Chaine</em>'.
+	 * @generated
+	 */
+	Chaine createChaine();
+
+	/**
+	 * Returns a new object of class '<em>Entier</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Entier</em>'.
+	 * @generated
+	 */
+	Entier createEntier();
+
+	/**
+	 * Returns a new object of class '<em>Booleen</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Booleen</em>'.
+	 * @generated
+	 */
+	Booleen createBooleen();
 
 	/**
 	 * Returns the package supported by this factory.

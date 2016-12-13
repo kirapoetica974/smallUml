@@ -5,8 +5,47 @@
     complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
   <foreignModel>smalluml.ecore</foreignModel>
   <genPackages prefix="Smalluml" disposableProviderFactory="true" ecorePackage="smalluml.ecore#/">
-    <genClasses ecoreClass="smalluml.ecore#//Class">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smalluml.ecore#//Class/name"/>
+    <genClasses ecoreClass="smalluml.ecore#//Classe">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smalluml.ecore#//Classe/nomClasse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smalluml.ecore#//Classe/attributs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smalluml.ecore#//Classe/methodes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smalluml.ecore#//Classe/abstrait"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smalluml.ecore#//Classe/cardinalites"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smalluml.ecore#//Classe/sousClasses"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smalluml.ecore#//Classe/superClasse"/>
     </genClasses>
+    <genClasses ecoreClass="smalluml.ecore#//Attribut">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smalluml.ecore#//Attribut/nomAttribut"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smalluml.ecore#//Attribut/type"/>
+    </genClasses>
+    <genClasses ecoreClass="smalluml.ecore#//Enumeration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smalluml.ecore#//Enumeration/nomEnumeration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smalluml.ecore#//Enumeration/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="smalluml.ecore#//Methode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smalluml.ecore#//Methode/nomMethode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smalluml.ecore#//Methode/typeDeRetour"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smalluml.ecore#//Methode/parametres"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smalluml.ecore#//Methode/abstrait"/>
+    </genClasses>
+    <genClasses ecoreClass="smalluml.ecore#//Type">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smalluml.ecore#//Type/nomType"/>
+    </genClasses>
+    <genClasses ecoreClass="smalluml.ecore#//TypeDonnee">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smalluml.ecore#//TypeDonnee/attributs"/>
+    </genClasses>
+    <genClasses ecoreClass="smalluml.ecore#//Element">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smalluml.ecore#//Element/nomElement"/>
+    </genClasses>
+    <genClasses ecoreClass="smalluml.ecore#//Association">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smalluml.ecore#//Association/nomAssociation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smalluml.ecore#//Association/cardinalites"/>
+    </genClasses>
+    <genClasses ecoreClass="smalluml.ecore#//Cardinalite">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smalluml.ecore#//Cardinalite/multiplicite"/>
+    </genClasses>
+    <genClasses ecoreClass="smalluml.ecore#//Chaine"/>
+    <genClasses ecoreClass="smalluml.ecore#//Entier"/>
+    <genClasses ecoreClass="smalluml.ecore#//Booleen"/>
   </genPackages>
 </genmodel:GenModel>

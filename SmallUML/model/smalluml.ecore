@@ -4,14 +4,14 @@
   <eClassifiers xsi:type="ecore:EClass" name="Classe">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nomClasse" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributs" upperBound="-1"
-        eType="#//Attribut"/>
+        eType="#//Attribut" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="methodes" upperBound="-1"
-        eType="#//Methode"/>
+        eType="#//Methode" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="abstrait" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cardinalites" upperBound="-1"
-        eType="#//Cardinalite"/>
+        eType="#//Cardinalite" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sousClasses" upperBound="-1"
-        eType="#//Classe"/>
+        eType="#//Classe" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="superClasse" eType="#//Classe"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Attribut">
@@ -21,13 +21,13 @@
   <eClassifiers xsi:type="ecore:EClass" name="Enumeration" eSuperTypes="#//Type">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nomEnumeration" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" lowerBound="1"
-        upperBound="-1" eType="#//Element"/>
+        upperBound="-1" eType="#//Element" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Methode">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nomMethode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="typeDeRetour" eType="#//Type"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parametres" upperBound="-1"
-        eType="#//Attribut"/>
+        eType="#//Attribut" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="abstrait" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Type">
@@ -35,7 +35,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TypeDonnee" eSuperTypes="#//Type">
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributs" upperBound="-1"
-        eType="#//Attribut"/>
+        eType="#//Attribut" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Element">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nomElement" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -43,12 +43,12 @@
   <eClassifiers xsi:type="ecore:EClass" name="Association">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nomAssociation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cardinalites" lowerBound="2"
-        upperBound="-1" eType="#//Cardinalite"/>
+        upperBound="-1" eType="#//Cardinalite" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Cardinalite">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicite" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="String" eSuperTypes="#//Type"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Integer" eSuperTypes="#//Type"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Boolean" eSuperTypes="#//Type"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Chaine" eSuperTypes="#//Type"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Entier" eSuperTypes="#//Type"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Booleen" eSuperTypes="#//Type"/>
 </ecore:EPackage>

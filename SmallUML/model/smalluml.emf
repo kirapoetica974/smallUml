@@ -3,11 +3,11 @@ package smalluml;
 
 class Classe {
   attr String nomClasse;
-  ref Attribut[*] attributs;
-  ref Methode[*] methodes;
+  val Attribut[*] attributs;
+  val Methode[*] methodes;
   attr boolean abstrait;
-  ref Cardinalite[*] cardinalites;
-  ref Classe[*] sousClasses;
+  val Cardinalite[*] cardinalites;
+  val Classe[*] sousClasses;
   ref Classe superClasse;
 }
 
@@ -18,13 +18,13 @@ class Attribut {
 
 class Enumeration extends Type {
   attr String nomEnumeration;
-  ref Element[+] elements;
+  val Element[+] elements;
 }
 
 class Methode {
   attr String nomMethode;
   ref Type typeDeRetour;
-  ref Attribut[*] parametres;
+  val Attribut[*] parametres;
   attr boolean abstrait;
 }
 
@@ -33,7 +33,7 @@ class Type {
 }
 
 class TypeDonnee extends Type {
-  ref Attribut[*] attributs;
+  val Attribut[*] attributs;
 }
 
 class Element {
@@ -42,19 +42,19 @@ class Element {
 
 class Association {
   attr String nomAssociation;
-  ref Cardinalite[2..*] cardinalites;
+  val Cardinalite[2..*] cardinalites;
 }
 
 class Cardinalite {
   attr String multiplicite;
 }
 
-class String extends Type {
+class Chaine extends Type {
 }
 
-class Integer extends Type {
+class Entier extends Type {
 }
 
-class Boolean extends Type {
+class Booleen extends Type {
 }
 

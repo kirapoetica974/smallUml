@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
+import smalluml.*;
 import smalluml.SmallumlFactory;
 import smalluml.SmallumlPackage;
 
@@ -57,7 +58,18 @@ public class SmallumlFactoryImpl extends EFactoryImpl implements SmallumlFactory
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case SmallumlPackage.CLASS: return createClass();
+			case SmallumlPackage.CLASSE: return createClasse();
+			case SmallumlPackage.ATTRIBUT: return createAttribut();
+			case SmallumlPackage.ENUMERATION: return createEnumeration();
+			case SmallumlPackage.METHODE: return createMethode();
+			case SmallumlPackage.TYPE: return createType();
+			case SmallumlPackage.TYPE_DONNEE: return createTypeDonnee();
+			case SmallumlPackage.ELEMENT: return createElement();
+			case SmallumlPackage.ASSOCIATION: return createAssociation();
+			case SmallumlPackage.CARDINALITE: return createCardinalite();
+			case SmallumlPackage.CHAINE: return createChaine();
+			case SmallumlPackage.ENTIER: return createEntier();
+			case SmallumlPackage.BOOLEEN: return createBooleen();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -68,9 +80,119 @@ public class SmallumlFactoryImpl extends EFactoryImpl implements SmallumlFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public smalluml.Class createClass() {
-		ClassImpl class_ = new ClassImpl();
-		return class_;
+	public Classe createClasse() {
+		ClasseImpl classe = new ClasseImpl();
+		return classe;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Attribut createAttribut() {
+		AttributImpl attribut = new AttributImpl();
+		return attribut;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Enumeration createEnumeration() {
+		EnumerationImpl enumeration = new EnumerationImpl();
+		return enumeration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Methode createMethode() {
+		MethodeImpl methode = new MethodeImpl();
+		return methode;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Type createType() {
+		TypeImpl type = new TypeImpl();
+		return type;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TypeDonnee createTypeDonnee() {
+		TypeDonneeImpl typeDonnee = new TypeDonneeImpl();
+		return typeDonnee;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Element createElement() {
+		ElementImpl element = new ElementImpl();
+		return element;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Association createAssociation() {
+		AssociationImpl association = new AssociationImpl();
+		return association;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Cardinalite createCardinalite() {
+		CardinaliteImpl cardinalite = new CardinaliteImpl();
+		return cardinalite;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Chaine createChaine() {
+		ChaineImpl chaine = new ChaineImpl();
+		return chaine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Entier createEntier() {
+		EntierImpl entier = new EntierImpl();
+		return entier;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Booleen createBooleen() {
+		BooleenImpl booleen = new BooleenImpl();
+		return booleen;
 	}
 
 	/**

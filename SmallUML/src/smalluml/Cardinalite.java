@@ -85,7 +85,7 @@ public interface Cardinalite extends ElementNomme {
 	 * @return the value of the '<em>Classe</em>' containment reference.
 	 * @see #setClasse(Classe)
 	 * @see smalluml.SmallumlPackage#getCardinalite_Classe()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Classe getClasse();

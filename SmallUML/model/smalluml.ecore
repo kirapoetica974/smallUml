@@ -39,8 +39,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Cardinalite" eSuperTypes="#//ElementNomme">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multipliciteInf" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multipliciteSup" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="classe" eType="#//Classe"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="classe" lowerBound="1"
+        eType="#//Classe" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Chaine" eSuperTypes="#//Type"/>
   <eClassifiers xsi:type="ecore:EClass" name="Entier" eSuperTypes="#//Type"/>

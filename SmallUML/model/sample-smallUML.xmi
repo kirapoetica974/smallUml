@@ -9,7 +9,6 @@
 		<attributs nom="Immatriculation">
 			<type xsi:type="smalluml:Chaine" />
 		</attributs>
-		<cardinalites nom="estVehicule" multipliciteInf="0" multipliciteSup="-1"></cardinalites>
 	</elementsDiagramme>
 
 	<elementsDiagramme xsi:type="smalluml:Classe" nom="moto"
@@ -19,7 +18,6 @@
 				<type xsi:type="smalluml:Entier" />
 			</parametres>
 		</methodes>
-		<cardinalites nom="motoEst" multipliciteInf="1" multipliciteSup="1"></cardinalites>
 	</elementsDiagramme>
 
 	<elementsDiagramme xsi:type="smalluml:Enumeration"
@@ -30,8 +28,8 @@
 
 	<elementsDiagramme xsi:type="smalluml:Association"
 		nom="etre">
-		<cardinalites nom="motoEst" multipliciteInf="1" multipliciteSup="1"></cardinalites>
-		<cardinalites nom="estVehicule" multipliciteInf="0" multipliciteSup="-1"></cardinalites>
+		<cardinalites nom="motoEst" classe="//@elementsDiagramme.1" multipliciteInf="1" multipliciteSup="1"></cardinalites>
+		<cardinalites nom="estVehicule" classe="//@elementsDiagramme.0" multipliciteInf="0" multipliciteSup="-1"></cardinalites>
 	</elementsDiagramme>
 
 </smalluml:Diagramme>

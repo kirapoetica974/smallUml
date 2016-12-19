@@ -111,7 +111,7 @@ lazy rule cardinalite2Role {
 	to
 		y : MM1!Property (
 			name <- x.nom,
-			--type <- x.,
+			type <- x.classe,
 			lowerValue <- thisModule.int2LowerBound(x.multipliciteInf),
 			upperValue <- thisModule.int2UpperBound(x.multipliciteSup)
 		)

@@ -38,7 +38,7 @@ class Association extends ElementDiagramme, ElementNomme {
 class Cardinalite extends ElementNomme {
   attr String multipliciteInf;
   attr String multipliciteSup;
-  val Classe classe;
+  val Classe[1] classe;
 }
 
 class Chaine extends Type {

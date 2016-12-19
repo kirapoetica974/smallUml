@@ -3,12 +3,10 @@
  */
 package org.smalluml.ui.contentassist;
 
-import org.smalluml.ui.contentassist.AbstractSmallUMLProposalProvider;
-
 /**
  * See https://www.eclipse.org/Xtext/documentation/304_ide_concepts.html#content-assist
  * on how to customize the content assistant.
  */
 @SuppressWarnings("all")
-public class SmallUMLProposalProvider extends AbstractSmallUMLProposalProvider {
+public class SmallUMLProposalProvider /* implements AbstractSmallUMLProposalProvider  */{
 }

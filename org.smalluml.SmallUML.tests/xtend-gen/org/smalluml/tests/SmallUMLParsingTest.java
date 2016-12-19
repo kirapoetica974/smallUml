@@ -12,11 +12,10 @@ import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.smalluml.tests.SmallUMLInjectorProvider;
 import smalluml.Classe;
 
-@RunWith(XtextRunner.class)
-@InjectWith(SmallUMLInjectorProvider.class)
+@RunWith(XtextRunner.class)/* 
+@InjectWith(/* name is null */) */
 @SuppressWarnings("all")
 public class SmallUMLParsingTest {
   @Inject

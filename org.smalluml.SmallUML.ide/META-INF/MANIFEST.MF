@@ -11,5 +11,7 @@ Require-Bundle: org.smalluml.SmallUML,
  org.eclipse.xtext.xbase.ide
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.smalluml.ide.contentassist.antlr.internal,
- org.smalluml.ide.contentassist.antlr
+ org.smalluml.ide.contentassist.antlr,
+ org.xtext.example.mydsl.ide.contentassist.antlr.internal,
+ org.xtext.example.mydsl.ide.contentassist.antlr
 

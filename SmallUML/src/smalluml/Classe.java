@@ -4,8 +4,6 @@ package smalluml;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Classe</b></em>'.
@@ -15,46 +13,19 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link smalluml.Classe#getNomClasse <em>Nom Classe</em>}</li>
  *   <li>{@link smalluml.Classe#getAttributs <em>Attributs</em>}</li>
  *   <li>{@link smalluml.Classe#getMethodes <em>Methodes</em>}</li>
  *   <li>{@link smalluml.Classe#isAbstrait <em>Abstrait</em>}</li>
- *   <li>{@link smalluml.Classe#getCardinalites <em>Cardinalites</em>}</li>
  *   <li>{@link smalluml.Classe#getSousClasses <em>Sous Classes</em>}</li>
  *   <li>{@link smalluml.Classe#getSuperClasse <em>Super Classe</em>}</li>
+ *   <li>{@link smalluml.Classe#isClasseAbstraite <em>Classe Abstraite</em>}</li>
  * </ul>
  *
  * @see smalluml.SmallumlPackage#getClasse()
  * @model
  * @generated
  */
-public interface Classe extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Nom Classe</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Nom Classe</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nom Classe</em>' attribute.
-	 * @see #setNomClasse(String)
-	 * @see smalluml.SmallumlPackage#getClasse_NomClasse()
-	 * @model
-	 * @generated
-	 */
-	String getNomClasse();
-
-	/**
-	 * Sets the value of the '{@link smalluml.Classe#getNomClasse <em>Nom Classe</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nom Classe</em>' attribute.
-	 * @see #getNomClasse()
-	 * @generated
-	 */
-	void setNomClasse(String value);
-
+public interface Classe extends ElementDiagramme, ElementNomme {
 	/**
 	 * Returns the value of the '<em><b>Attributs</b></em>' containment reference list.
 	 * The list contents are of type {@link smalluml.Attribut}.
@@ -114,22 +85,6 @@ public interface Classe extends EObject {
 	void setAbstrait(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Cardinalites</b></em>' containment reference list.
-	 * The list contents are of type {@link smalluml.Cardinalite}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Cardinalites</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Cardinalites</em>' containment reference list.
-	 * @see smalluml.SmallumlPackage#getClasse_Cardinalites()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Cardinalite> getCardinalites();
-
-	/**
 	 * Returns the value of the '<em><b>Sous Classes</b></em>' containment reference list.
 	 * The list contents are of type {@link smalluml.Classe}.
 	 * <!-- begin-user-doc -->
@@ -170,5 +125,31 @@ public interface Classe extends EObject {
 	 * @generated
 	 */
 	void setSuperClasse(Classe value);
+
+	/**
+	 * Returns the value of the '<em><b>Classe Abstraite</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Classe Abstraite</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Classe Abstraite</em>' attribute.
+	 * @see #setClasseAbstraite(boolean)
+	 * @see smalluml.SmallumlPackage#getClasse_ClasseAbstraite()
+	 * @model
+	 * @generated
+	 */
+	boolean isClasseAbstraite();
+
+	/**
+	 * Sets the value of the '{@link smalluml.Classe#isClasseAbstraite <em>Classe Abstraite</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Classe Abstraite</em>' attribute.
+	 * @see #isClasseAbstraite()
+	 * @generated
+	 */
+	void setClasseAbstraite(boolean value);
 
 } // Classe

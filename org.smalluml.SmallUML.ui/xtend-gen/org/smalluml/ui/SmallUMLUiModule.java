@@ -3,17 +3,12 @@
  */
 package org.smalluml.ui;
 
-import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.eclipse.xtend.lib.annotations.FinalFieldsConstructor;
-import org.smalluml.ui.AbstractSmallUMLUiModule;
 
 /**
  * Use this class to register components to be used within the Eclipse IDE.
  */
 @FinalFieldsConstructor
 @SuppressWarnings("all")
-public class SmallUMLUiModule extends AbstractSmallUMLUiModule {
-  public SmallUMLUiModule(final AbstractUIPlugin plugin) {
-    super(plugin);
-  }
+public class SmallUMLUiModule /* implements AbstractSmallUMLUiModule  */{
 }

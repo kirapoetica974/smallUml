@@ -14,8 +14,8 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.eclipse.xtext.ui.shared.SharedStateModule;
 import org.eclipse.xtext.util.Modules2;
 import org.osgi.framework.BundleContext;
-import org.smalluml.SmallUMLRuntimeModule;
-import org.smalluml.ui.SmallUMLUiModule;
+import org.xtext.example.mydsl.MyDslRuntimeModule;
+import org.xtext.example.mydsl.ui.MyDslUiModule;
 
 /**
  * This class was generated. Customizations should only happen in a newly
@@ -23,7 +23,7 @@ import org.smalluml.ui.SmallUMLUiModule;
  */
 public class SmallUMLActivator extends AbstractUIPlugin {
 
-	public static final String ORG_SMALLUML_SMALLUML = "org.smalluml.SmallUML";
+	public static final String ORG_XTEXT_EXAMPLE_MYDSL_MYDSL = "org.xtext.example.mydsl.MyDsl";
 	
 	private static final Logger logger = Logger.getLogger(SmallUMLActivator.class);
 	
@@ -73,15 +73,15 @@ public class SmallUMLActivator extends AbstractUIPlugin {
 	}
 	
 	protected Module getRuntimeModule(String grammar) {
-		if (ORG_SMALLUML_SMALLUML.equals(grammar)) {
-			return new SmallUMLRuntimeModule();
+		if (ORG_XTEXT_EXAMPLE_MYDSL_MYDSL.equals(grammar)) {
+			return new MyDslRuntimeModule();
 		}
 		throw new IllegalArgumentException(grammar);
 	}
 	
 	protected Module getUiModule(String grammar) {
-		if (ORG_SMALLUML_SMALLUML.equals(grammar)) {
-			return new SmallUMLUiModule(this);
+		if (ORG_XTEXT_EXAMPLE_MYDSL_MYDSL.equals(grammar)) {
+			return new MyDslUiModule(this);
 		}
 		throw new IllegalArgumentException(grammar);
 	}

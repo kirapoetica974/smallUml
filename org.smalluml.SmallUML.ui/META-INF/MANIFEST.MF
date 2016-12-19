@@ -22,5 +22,7 @@ Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.smalluml.ui.contentassist,
  org.smalluml.SmallUML.ui.internal,
- org.smalluml.ui.quickfix
+ org.smalluml.ui.quickfix,
+ org.xtext.example.mydsl.ui.quickfix,
+ org.xtext.example.mydsl.ui.contentassist
 Bundle-Activator: org.smalluml.SmallUML.ui.internal.SmallUMLActivator

@@ -3,23 +3,17 @@
 package smalluml.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import smalluml.Association;
 import smalluml.Cardinalite;
+import smalluml.ElementNomme;
 import smalluml.SmallumlPackage;
 
 /**
@@ -30,32 +24,32 @@ import smalluml.SmallumlPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link smalluml.impl.AssociationImpl#getNomAssociation <em>Nom Association</em>}</li>
+ *   <li>{@link smalluml.impl.AssociationImpl#getNom <em>Nom</em>}</li>
  *   <li>{@link smalluml.impl.AssociationImpl#getCardinalites <em>Cardinalites</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class AssociationImpl extends MinimalEObjectImpl.Container implements Association {
+public class AssociationImpl extends ElementDiagrammeImpl implements Association {
 	/**
-	 * The default value of the '{@link #getNomAssociation() <em>Nom Association</em>}' attribute.
+	 * The default value of the '{@link #getNom() <em>Nom</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNomAssociation()
+	 * @see #getNom()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NOM_ASSOCIATION_EDEFAULT = null;
+	protected static final String NOM_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getNomAssociation() <em>Nom Association</em>}' attribute.
+	 * The cached value of the '{@link #getNom() <em>Nom</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNomAssociation()
+	 * @see #getNom()
 	 * @generated
 	 * @ordered
 	 */
-	protected String nomAssociation = NOM_ASSOCIATION_EDEFAULT;
+	protected String nom = NOM_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getCardinalites() <em>Cardinalites</em>}' containment reference list.
@@ -91,8 +85,8 @@ public class AssociationImpl extends MinimalEObjectImpl.Container implements Ass
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNomAssociation() {
-		return nomAssociation;
+	public String getNom() {
+		return nom;
 	}
 
 	/**
@@ -100,11 +94,11 @@ public class AssociationImpl extends MinimalEObjectImpl.Container implements Ass
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNomAssociation(String newNomAssociation) {
-		String oldNomAssociation = nomAssociation;
-		nomAssociation = newNomAssociation;
+	public void setNom(String newNom) {
+		String oldNom = nom;
+		nom = newNom;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SmallumlPackage.ASSOCIATION__NOM_ASSOCIATION, oldNomAssociation, nomAssociation));
+			eNotify(new ENotificationImpl(this, Notification.SET, SmallumlPackage.ASSOCIATION__NOM, oldNom, nom));
 	}
 
 	/**
@@ -141,8 +135,8 @@ public class AssociationImpl extends MinimalEObjectImpl.Container implements Ass
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SmallumlPackage.ASSOCIATION__NOM_ASSOCIATION:
-				return getNomAssociation();
+			case SmallumlPackage.ASSOCIATION__NOM:
+				return getNom();
 			case SmallumlPackage.ASSOCIATION__CARDINALITES:
 				return getCardinalites();
 		}
@@ -158,8 +152,8 @@ public class AssociationImpl extends MinimalEObjectImpl.Container implements Ass
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SmallumlPackage.ASSOCIATION__NOM_ASSOCIATION:
-				setNomAssociation((String)newValue);
+			case SmallumlPackage.ASSOCIATION__NOM:
+				setNom((String)newValue);
 				return;
 			case SmallumlPackage.ASSOCIATION__CARDINALITES:
 				getCardinalites().clear();
@@ -177,8 +171,8 @@ public class AssociationImpl extends MinimalEObjectImpl.Container implements Ass
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SmallumlPackage.ASSOCIATION__NOM_ASSOCIATION:
-				setNomAssociation(NOM_ASSOCIATION_EDEFAULT);
+			case SmallumlPackage.ASSOCIATION__NOM:
+				setNom(NOM_EDEFAULT);
 				return;
 			case SmallumlPackage.ASSOCIATION__CARDINALITES:
 				getCardinalites().clear();
@@ -195,8 +189,8 @@ public class AssociationImpl extends MinimalEObjectImpl.Container implements Ass
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SmallumlPackage.ASSOCIATION__NOM_ASSOCIATION:
-				return NOM_ASSOCIATION_EDEFAULT == null ? nomAssociation != null : !NOM_ASSOCIATION_EDEFAULT.equals(nomAssociation);
+			case SmallumlPackage.ASSOCIATION__NOM:
+				return NOM_EDEFAULT == null ? nom != null : !NOM_EDEFAULT.equals(nom);
 			case SmallumlPackage.ASSOCIATION__CARDINALITES:
 				return cardinalites != null && !cardinalites.isEmpty();
 		}
@@ -209,12 +203,44 @@ public class AssociationImpl extends MinimalEObjectImpl.Container implements Ass
 	 * @generated
 	 */
 	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == ElementNomme.class) {
+			switch (derivedFeatureID) {
+				case SmallumlPackage.ASSOCIATION__NOM: return SmallumlPackage.ELEMENT_NOMME__NOM;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == ElementNomme.class) {
+			switch (baseFeatureID) {
+				case SmallumlPackage.ELEMENT_NOMME__NOM: return SmallumlPackage.ASSOCIATION__NOM;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (nomAssociation: ");
-		result.append(nomAssociation);
+		result.append(" (nom: ");
+		result.append(nom);
 		result.append(')');
 		return result.toString();
 	}

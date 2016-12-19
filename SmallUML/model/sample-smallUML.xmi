@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<smalluml:Diagramme xmi:version="2.0"
+	xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:smalluml="http://www.univ-nantes.fr/smalluml" xsi:schemaLocation="http://www.univ-nantes.fr/smalluml smalluml.ecore"
+	nom="Ma_Moto_Me_Manque">
+
+	<elementsDiagramme xsi:type="smalluml:Classe" nom="vehicule">
+		<attributs nom="Immatriculation">
+			<type xsi:type="smalluml:Chaine" />
+		</attributs>
+		<cardinalites nom="estVehicule" multipliciteInf="0" multipliciteSup="-1"></cardinalites>
+	</elementsDiagramme>
+
+	<elementsDiagramme xsi:type="smalluml:Classe" nom="moto"
+		superClasse="//@elementsDiagramme.0">
+		<methodes nom="rouler">
+			<parametres nom="nbKm">
+				<type xsi:type="smalluml:Entier" />
+			</parametres>
+		</methodes>
+		<cardinalites nom="motoEst" multipliciteInf="1" multipliciteSup="1"></cardinalites>
+	</elementsDiagramme>
+
+	<elementsDiagramme xsi:type="smalluml:Enumeration"
+		nom="Cylindree">
+		<elements>Bicylindree</elements>
+		<elements>Monocylindree</elements>
+	</elementsDiagramme>
+
+	<elementsDiagramme xsi:type="smalluml:Association"
+		nom="etre">
+		<cardinalites nom="motoEst" multipliciteInf="1" multipliciteSup="1"></cardinalites>
+		<cardinalites nom="estVehicule" multipliciteInf="0" multipliciteSup="-1"></cardinalites>
+	</elementsDiagramme>
+
+</smalluml:Diagramme>

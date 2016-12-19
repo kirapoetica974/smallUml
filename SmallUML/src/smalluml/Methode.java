@@ -4,8 +4,6 @@ package smalluml;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Methode</b></em>'.
@@ -15,64 +13,37 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link smalluml.Methode#getNomMethode <em>Nom Methode</em>}</li>
  *   <li>{@link smalluml.Methode#getTypeDeRetour <em>Type De Retour</em>}</li>
  *   <li>{@link smalluml.Methode#getParametres <em>Parametres</em>}</li>
- *   <li>{@link smalluml.Methode#isAbstrait <em>Abstrait</em>}</li>
+ *   <li>{@link smalluml.Methode#isMethodeAbstraite <em>Methode Abstraite</em>}</li>
  * </ul>
  *
  * @see smalluml.SmallumlPackage#getMethode()
  * @model
  * @generated
  */
-public interface Methode extends EObject {
+public interface Methode extends ElementNomme {
 	/**
-	 * Returns the value of the '<em><b>Nom Methode</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Nom Methode</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nom Methode</em>' attribute.
-	 * @see #setNomMethode(String)
-	 * @see smalluml.SmallumlPackage#getMethode_NomMethode()
-	 * @model
-	 * @generated
-	 */
-	String getNomMethode();
-
-	/**
-	 * Sets the value of the '{@link smalluml.Methode#getNomMethode <em>Nom Methode</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nom Methode</em>' attribute.
-	 * @see #getNomMethode()
-	 * @generated
-	 */
-	void setNomMethode(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Type De Retour</b></em>' reference.
+	 * Returns the value of the '<em><b>Type De Retour</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Type De Retour</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type De Retour</em>' reference.
+	 * @return the value of the '<em>Type De Retour</em>' containment reference.
 	 * @see #setTypeDeRetour(Type)
 	 * @see smalluml.SmallumlPackage#getMethode_TypeDeRetour()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	Type getTypeDeRetour();
 
 	/**
-	 * Sets the value of the '{@link smalluml.Methode#getTypeDeRetour <em>Type De Retour</em>}' reference.
+	 * Sets the value of the '{@link smalluml.Methode#getTypeDeRetour <em>Type De Retour</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type De Retour</em>' reference.
+	 * @param value the new value of the '<em>Type De Retour</em>' containment reference.
 	 * @see #getTypeDeRetour()
 	 * @generated
 	 */
@@ -95,29 +66,29 @@ public interface Methode extends EObject {
 	EList<Attribut> getParametres();
 
 	/**
-	 * Returns the value of the '<em><b>Abstrait</b></em>' attribute.
+	 * Returns the value of the '<em><b>Methode Abstraite</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Abstrait</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Methode Abstraite</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Abstrait</em>' attribute.
-	 * @see #setAbstrait(boolean)
-	 * @see smalluml.SmallumlPackage#getMethode_Abstrait()
+	 * @return the value of the '<em>Methode Abstraite</em>' attribute.
+	 * @see #setMethodeAbstraite(boolean)
+	 * @see smalluml.SmallumlPackage#getMethode_MethodeAbstraite()
 	 * @model
 	 * @generated
 	 */
-	boolean isAbstrait();
+	boolean isMethodeAbstraite();
 
 	/**
-	 * Sets the value of the '{@link smalluml.Methode#isAbstrait <em>Abstrait</em>}' attribute.
+	 * Sets the value of the '{@link smalluml.Methode#isMethodeAbstraite <em>Methode Abstraite</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Abstrait</em>' attribute.
-	 * @see #isAbstrait()
+	 * @param value the new value of the '<em>Methode Abstraite</em>' attribute.
+	 * @see #isMethodeAbstraite()
 	 * @generated
 	 */
-	void setAbstrait(boolean value);
+	void setMethodeAbstraite(boolean value);
 
 } // Methode

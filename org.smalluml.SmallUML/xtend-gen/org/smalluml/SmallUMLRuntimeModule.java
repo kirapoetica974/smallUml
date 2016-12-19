@@ -3,11 +3,9 @@
  */
 package org.smalluml;
 
-import org.smalluml.AbstractSmallUMLRuntimeModule;
-
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
  */
 @SuppressWarnings("all")
-public class SmallUMLRuntimeModule extends AbstractSmallUMLRuntimeModule {
+public class SmallUMLRuntimeModule /* implements AbstractSmallUMLRuntimeModule  */{
 }

@@ -3,13 +3,11 @@
  */
 package org.smalluml.validation;
 
-import org.smalluml.validation.AbstractSmallUMLValidator;
-
 /**
  * This class contains custom validation rules.
  * 
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#validation
  */
 @SuppressWarnings("all")
-public class SmallUMLValidator extends AbstractSmallUMLValidator {
+public class SmallUMLValidator /* implements AbstractSmallUMLValidator  */{
 }

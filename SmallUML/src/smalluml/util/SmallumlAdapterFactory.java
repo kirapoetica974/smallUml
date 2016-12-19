@@ -4,13 +4,9 @@ package smalluml.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
-
 import smalluml.*;
-import smalluml.SmallumlPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -93,10 +89,6 @@ public class SmallumlAdapterFactory extends AdapterFactoryImpl {
 				return createTypeDonneeAdapter();
 			}
 			@Override
-			public Adapter caseElement(Element object) {
-				return createElementAdapter();
-			}
-			@Override
 			public Adapter caseAssociation(Association object) {
 				return createAssociationAdapter();
 			}
@@ -115,6 +107,18 @@ public class SmallumlAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseBooleen(Booleen object) {
 				return createBooleenAdapter();
+			}
+			@Override
+			public Adapter caseDiagramme(Diagramme object) {
+				return createDiagrammeAdapter();
+			}
+			@Override
+			public Adapter caseElementDiagramme(ElementDiagramme object) {
+				return createElementDiagrammeAdapter();
+			}
+			@Override
+			public Adapter caseElementNomme(ElementNomme object) {
+				return createElementNommeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -221,20 +225,6 @@ public class SmallumlAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link smalluml.Element <em>Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see smalluml.Element
-	 * @generated
-	 */
-	public Adapter createElementAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link smalluml.Association <em>Association</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -301,6 +291,48 @@ public class SmallumlAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createBooleenAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link smalluml.Diagramme <em>Diagramme</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see smalluml.Diagramme
+	 * @generated
+	 */
+	public Adapter createDiagrammeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link smalluml.ElementDiagramme <em>Element Diagramme</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see smalluml.ElementDiagramme
+	 * @generated
+	 */
+	public Adapter createElementDiagrammeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link smalluml.ElementNomme <em>Element Nomme</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see smalluml.ElementNomme
+	 * @generated
+	 */
+	public Adapter createElementNommeAdapter() {
 		return null;
 	}
 

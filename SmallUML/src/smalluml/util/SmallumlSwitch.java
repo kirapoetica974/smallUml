@@ -4,11 +4,8 @@ package smalluml.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
-
 import smalluml.*;
-import smalluml.SmallumlPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -70,12 +67,15 @@ public class SmallumlSwitch<T> extends Switch<T> {
 			case SmallumlPackage.CLASSE: {
 				Classe classe = (Classe)theEObject;
 				T result = caseClasse(classe);
+				if (result == null) result = caseElementDiagramme(classe);
+				if (result == null) result = caseElementNomme(classe);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SmallumlPackage.ATTRIBUT: {
 				Attribut attribut = (Attribut)theEObject;
 				T result = caseAttribut(attribut);
+				if (result == null) result = caseElementNomme(attribut);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -83,12 +83,15 @@ public class SmallumlSwitch<T> extends Switch<T> {
 				Enumeration enumeration = (Enumeration)theEObject;
 				T result = caseEnumeration(enumeration);
 				if (result == null) result = caseType(enumeration);
+				if (result == null) result = caseElementDiagramme(enumeration);
+				if (result == null) result = caseElementNomme(enumeration);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SmallumlPackage.METHODE: {
 				Methode methode = (Methode)theEObject;
 				T result = caseMethode(methode);
+				if (result == null) result = caseElementNomme(methode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -102,24 +105,23 @@ public class SmallumlSwitch<T> extends Switch<T> {
 				TypeDonnee typeDonnee = (TypeDonnee)theEObject;
 				T result = caseTypeDonnee(typeDonnee);
 				if (result == null) result = caseType(typeDonnee);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SmallumlPackage.ELEMENT: {
-				Element element = (Element)theEObject;
-				T result = caseElement(element);
+				if (result == null) result = caseElementDiagramme(typeDonnee);
+				if (result == null) result = caseElementNomme(typeDonnee);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SmallumlPackage.ASSOCIATION: {
 				Association association = (Association)theEObject;
 				T result = caseAssociation(association);
+				if (result == null) result = caseElementDiagramme(association);
+				if (result == null) result = caseElementNomme(association);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SmallumlPackage.CARDINALITE: {
 				Cardinalite cardinalite = (Cardinalite)theEObject;
 				T result = caseCardinalite(cardinalite);
+				if (result == null) result = caseElementNomme(cardinalite);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -141,6 +143,26 @@ public class SmallumlSwitch<T> extends Switch<T> {
 				Booleen booleen = (Booleen)theEObject;
 				T result = caseBooleen(booleen);
 				if (result == null) result = caseType(booleen);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SmallumlPackage.DIAGRAMME: {
+				Diagramme diagramme = (Diagramme)theEObject;
+				T result = caseDiagramme(diagramme);
+				if (result == null) result = caseElementDiagramme(diagramme);
+				if (result == null) result = caseElementNomme(diagramme);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SmallumlPackage.ELEMENT_DIAGRAMME: {
+				ElementDiagramme elementDiagramme = (ElementDiagramme)theEObject;
+				T result = caseElementDiagramme(elementDiagramme);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SmallumlPackage.ELEMENT_NOMME: {
+				ElementNomme elementNomme = (ElementNomme)theEObject;
+				T result = caseElementNomme(elementNomme);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -239,21 +261,6 @@ public class SmallumlSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Element</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseElement(Element object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Association</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -325,6 +332,51 @@ public class SmallumlSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseBooleen(Booleen object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Diagramme</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Diagramme</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDiagramme(Diagramme object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Element Diagramme</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Element Diagramme</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseElementDiagramme(ElementDiagramme object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Element Nomme</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Element Nomme</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseElementNomme(ElementNomme object) {
 		return null;
 	}
 

@@ -1,52 +1,44 @@
 @namespace(uri="http://www.univ-nantes.fr/smalluml", prefix="smalluml")
 package smalluml;
 
-class Classe {
-  attr String nomClasse;
+class Classe extends ElementDiagramme, ElementNomme {
   val Attribut[*] attributs;
   val Methode[*] methodes;
   attr boolean abstrait;
-  val Cardinalite[*] cardinalites;
   val Classe[*] sousClasses;
   ref Classe superClasse;
+  attr boolean classeAbstraite;
 }
 
-class Attribut {
-  attr String nomAttribut;
-  ref Type[1] type;
+class Attribut extends ElementNomme {
+  val Type[1] type;
 }
 
-class Enumeration extends Type {
-  attr String nomEnumeration;
-  val Element[+] elements;
+class Enumeration extends Type, ElementDiagramme, ElementNomme {
+  attr String[*] elements;
 }
 
-class Methode {
-  attr String nomMethode;
-  ref Type typeDeRetour;
+class Methode extends ElementNomme {
+  val Type typeDeRetour;
   val Attribut[*] parametres;
-  attr boolean abstrait;
+  attr boolean methodeAbstraite;
 }
 
-class Type {
-  attr String nomType;
+abstract class Type {
 }
 
-class TypeDonnee extends Type {
+class TypeDonnee extends Type, ElementDiagramme, ElementNomme {
   val Attribut[*] attributs;
 }
 
-class Element {
-  attr String nomElement;
-}
-
-class Association {
-  attr String nomAssociation;
+class Association extends ElementDiagramme, ElementNomme {
   val Cardinalite[2..*] cardinalites;
 }
 
-class Cardinalite {
-  attr String multiplicite;
+class Cardinalite extends ElementNomme {
+  attr String multipliciteInf;
+  attr String multipliciteSup;
+  val Classe classe;
 }
 
 class Chaine extends Type {
@@ -56,5 +48,20 @@ class Entier extends Type {
 }
 
 class Booleen extends Type {
+}
+
+class Diagramme extends ElementDiagramme, ElementNomme {
+  val ElementDiagramme[*] elementsDiagramme;
+}
+
+abstract class ElementDiagramme {
+  val Classe[*] classe;
+  val Association[*] association;
+  val Enumeration[*] enumeration;
+  val TypeDonnee[*] typeDonnee;
+}
+
+abstract class ElementNomme {
+  attr String nom;
 }
 

@@ -57,6 +57,70 @@ public interface SmallumlPackage extends EPackage {
 	SmallumlPackage eINSTANCE = smalluml.impl.SmallumlPackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link smalluml.impl.ElementDiagrammeImpl <em>Element Diagramme</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see smalluml.impl.ElementDiagrammeImpl
+	 * @see smalluml.impl.SmallumlPackageImpl#getElementDiagramme()
+	 * @generated
+	 */
+	int ELEMENT_DIAGRAMME = 12;
+
+	/**
+	 * The feature id for the '<em><b>Classe</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_DIAGRAMME__CLASSE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Association</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_DIAGRAMME__ASSOCIATION = 1;
+
+	/**
+	 * The feature id for the '<em><b>Enumeration</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_DIAGRAMME__ENUMERATION = 2;
+
+	/**
+	 * The feature id for the '<em><b>Type Donnee</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_DIAGRAMME__TYPE_DONNEE = 3;
+
+	/**
+	 * The number of structural features of the '<em>Element Diagramme</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_DIAGRAMME_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Element Diagramme</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_DIAGRAMME_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link smalluml.impl.ClasseImpl <em>Classe</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -65,87 +129,6 @@ public interface SmallumlPackage extends EPackage {
 	 * @generated
 	 */
 	int CLASSE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Nom Classe</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASSE__NOM_CLASSE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Attributs</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASSE__ATTRIBUTS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Methodes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASSE__METHODES = 2;
-
-	/**
-	 * The feature id for the '<em><b>Abstrait</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASSE__ABSTRAIT = 3;
-
-	/**
-	 * The feature id for the '<em><b>Cardinalites</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASSE__CARDINALITES = 4;
-
-	/**
-	 * The feature id for the '<em><b>Sous Classes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASSE__SOUS_CLASSES = 5;
-
-	/**
-	 * The feature id for the '<em><b>Super Classe</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASSE__SUPER_CLASSE = 6;
-
-	/**
-	 * The number of structural features of the '<em>Classe</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASSE_FEATURE_COUNT = 7;
-
-	/**
-	 * The number of operations of the '<em>Classe</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASSE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link smalluml.impl.AttributImpl <em>Attribut</em>}' class.
@@ -158,42 +141,6 @@ public interface SmallumlPackage extends EPackage {
 	int ATTRIBUT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Nom Attribut</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATTRIBUT__NOM_ATTRIBUT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATTRIBUT__TYPE = 1;
-
-	/**
-	 * The number of structural features of the '<em>Attribut</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATTRIBUT_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Attribut</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATTRIBUT_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link smalluml.impl.TypeImpl <em>Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -202,33 +149,6 @@ public interface SmallumlPackage extends EPackage {
 	 * @generated
 	 */
 	int TYPE = 4;
-
-	/**
-	 * The feature id for the '<em><b>Nom Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TYPE__NOM_TYPE = 0;
-
-	/**
-	 * The number of structural features of the '<em>Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TYPE_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TYPE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link smalluml.impl.EnumerationImpl <em>Enumeration</em>}' class.
@@ -241,51 +161,6 @@ public interface SmallumlPackage extends EPackage {
 	int ENUMERATION = 2;
 
 	/**
-	 * The feature id for the '<em><b>Nom Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENUMERATION__NOM_TYPE = TYPE__NOM_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Nom Enumeration</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENUMERATION__NOM_ENUMERATION = TYPE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENUMERATION__ELEMENTS = TYPE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Enumeration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENUMERATION_FEATURE_COUNT = TYPE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Enumeration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENUMERATION_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link smalluml.impl.MethodeImpl <em>Methode</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -294,60 +169,6 @@ public interface SmallumlPackage extends EPackage {
 	 * @generated
 	 */
 	int METHODE = 3;
-
-	/**
-	 * The feature id for the '<em><b>Nom Methode</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METHODE__NOM_METHODE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Type De Retour</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METHODE__TYPE_DE_RETOUR = 1;
-
-	/**
-	 * The feature id for the '<em><b>Parametres</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METHODE__PARAMETRES = 2;
-
-	/**
-	 * The feature id for the '<em><b>Abstrait</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METHODE__ABSTRAIT = 3;
-
-	/**
-	 * The number of structural features of the '<em>Methode</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METHODE_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>Methode</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METHODE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link smalluml.impl.TypeDonneeImpl <em>Type Donnee</em>}' class.
@@ -360,13 +181,99 @@ public interface SmallumlPackage extends EPackage {
 	int TYPE_DONNEE = 5;
 
 	/**
-	 * The feature id for the '<em><b>Nom Type</b></em>' attribute.
+	 * The meta object id for the '{@link smalluml.impl.AssociationImpl <em>Association</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see smalluml.impl.AssociationImpl
+	 * @see smalluml.impl.SmallumlPackageImpl#getAssociation()
+	 * @generated
+	 */
+	int ASSOCIATION = 6;
+
+	/**
+	 * The meta object id for the '{@link smalluml.impl.CardinaliteImpl <em>Cardinalite</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see smalluml.impl.CardinaliteImpl
+	 * @see smalluml.impl.SmallumlPackageImpl#getCardinalite()
+	 * @generated
+	 */
+	int CARDINALITE = 7;
+
+	/**
+	 * The meta object id for the '{@link smalluml.impl.ChaineImpl <em>Chaine</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see smalluml.impl.ChaineImpl
+	 * @see smalluml.impl.SmallumlPackageImpl#getChaine()
+	 * @generated
+	 */
+	int CHAINE = 8;
+
+	/**
+	 * The meta object id for the '{@link smalluml.impl.EntierImpl <em>Entier</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see smalluml.impl.EntierImpl
+	 * @see smalluml.impl.SmallumlPackageImpl#getEntier()
+	 * @generated
+	 */
+	int ENTIER = 9;
+
+	/**
+	 * The meta object id for the '{@link smalluml.impl.BooleenImpl <em>Booleen</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see smalluml.impl.BooleenImpl
+	 * @see smalluml.impl.SmallumlPackageImpl#getBooleen()
+	 * @generated
+	 */
+	int BOOLEEN = 10;
+
+	/**
+	 * The feature id for the '<em><b>Classe</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE_DONNEE__NOM_TYPE = TYPE__NOM_TYPE;
+	int CLASSE__CLASSE = ELEMENT_DIAGRAMME__CLASSE;
+
+	/**
+	 * The feature id for the '<em><b>Association</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSE__ASSOCIATION = ELEMENT_DIAGRAMME__ASSOCIATION;
+
+	/**
+	 * The feature id for the '<em><b>Enumeration</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSE__ENUMERATION = ELEMENT_DIAGRAMME__ENUMERATION;
+
+	/**
+	 * The feature id for the '<em><b>Type Donnee</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSE__TYPE_DONNEE = ELEMENT_DIAGRAMME__TYPE_DONNEE;
+
+	/**
+	 * The feature id for the '<em><b>Nom</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSE__NOM = ELEMENT_DIAGRAMME_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Attributs</b></em>' containment reference list.
@@ -375,7 +282,341 @@ public interface SmallumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE_DONNEE__ATTRIBUTS = TYPE_FEATURE_COUNT + 0;
+	int CLASSE__ATTRIBUTS = ELEMENT_DIAGRAMME_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Methodes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSE__METHODES = ELEMENT_DIAGRAMME_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Abstrait</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSE__ABSTRAIT = ELEMENT_DIAGRAMME_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Sous Classes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSE__SOUS_CLASSES = ELEMENT_DIAGRAMME_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Super Classe</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSE__SUPER_CLASSE = ELEMENT_DIAGRAMME_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Classe Abstraite</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSE__CLASSE_ABSTRAITE = ELEMENT_DIAGRAMME_FEATURE_COUNT + 6;
+
+	/**
+	 * The number of structural features of the '<em>Classe</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSE_FEATURE_COUNT = ELEMENT_DIAGRAMME_FEATURE_COUNT + 7;
+
+	/**
+	 * The number of operations of the '<em>Classe</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASSE_OPERATION_COUNT = ELEMENT_DIAGRAMME_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link smalluml.impl.ElementNommeImpl <em>Element Nomme</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see smalluml.impl.ElementNommeImpl
+	 * @see smalluml.impl.SmallumlPackageImpl#getElementNomme()
+	 * @generated
+	 */
+	int ELEMENT_NOMME = 13;
+
+	/**
+	 * The feature id for the '<em><b>Nom</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_NOMME__NOM = 0;
+
+	/**
+	 * The number of structural features of the '<em>Element Nomme</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_NOMME_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Element Nomme</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_NOMME_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Nom</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUT__NOM = ELEMENT_NOMME__NOM;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUT__TYPE = ELEMENT_NOMME_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Attribut</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUT_FEATURE_COUNT = ELEMENT_NOMME_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Attribut</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUT_OPERATION_COUNT = ELEMENT_NOMME_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Classe</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION__CLASSE = TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Association</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION__ASSOCIATION = TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Enumeration</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION__ENUMERATION = TYPE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Type Donnee</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION__TYPE_DONNEE = TYPE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Nom</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION__NOM = TYPE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Elements</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION__ELEMENTS = TYPE_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of structural features of the '<em>Enumeration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION_FEATURE_COUNT = TYPE_FEATURE_COUNT + 6;
+
+	/**
+	 * The number of operations of the '<em>Enumeration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Nom</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METHODE__NOM = ELEMENT_NOMME__NOM;
+
+	/**
+	 * The feature id for the '<em><b>Type De Retour</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METHODE__TYPE_DE_RETOUR = ELEMENT_NOMME_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Parametres</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METHODE__PARAMETRES = ELEMENT_NOMME_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Methode Abstraite</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METHODE__METHODE_ABSTRAITE = ELEMENT_NOMME_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Methode</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METHODE_FEATURE_COUNT = ELEMENT_NOMME_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Methode</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METHODE_OPERATION_COUNT = ELEMENT_NOMME_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Classe</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE_DONNEE__CLASSE = TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Association</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE_DONNEE__ASSOCIATION = TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Enumeration</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE_DONNEE__ENUMERATION = TYPE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Type Donnee</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE_DONNEE__TYPE_DONNEE = TYPE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Nom</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE_DONNEE__NOM = TYPE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Attributs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE_DONNEE__ATTRIBUTS = TYPE_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Type Donnee</em>' class.
@@ -384,7 +625,7 @@ public interface SmallumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE_DONNEE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
+	int TYPE_DONNEE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Type Donnee</em>' class.
@@ -396,60 +637,49 @@ public interface SmallumlPackage extends EPackage {
 	int TYPE_DONNEE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link smalluml.impl.ElementImpl <em>Element</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see smalluml.impl.ElementImpl
-	 * @see smalluml.impl.SmallumlPackageImpl#getElement()
-	 * @generated
-	 */
-	int ELEMENT = 6;
-
-	/**
-	 * The feature id for the '<em><b>Nom Element</b></em>' attribute.
+	 * The feature id for the '<em><b>Classe</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT__NOM_ELEMENT = 0;
+	int ASSOCIATION__CLASSE = ELEMENT_DIAGRAMME__CLASSE;
 
 	/**
-	 * The number of structural features of the '<em>Element</em>' class.
+	 * The feature id for the '<em><b>Association</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_FEATURE_COUNT = 1;
+	int ASSOCIATION__ASSOCIATION = ELEMENT_DIAGRAMME__ASSOCIATION;
 
 	/**
-	 * The number of operations of the '<em>Element</em>' class.
+	 * The feature id for the '<em><b>Enumeration</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_OPERATION_COUNT = 0;
+	int ASSOCIATION__ENUMERATION = ELEMENT_DIAGRAMME__ENUMERATION;
 
 	/**
-	 * The meta object id for the '{@link smalluml.impl.AssociationImpl <em>Association</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see smalluml.impl.AssociationImpl
-	 * @see smalluml.impl.SmallumlPackageImpl#getAssociation()
-	 * @generated
-	 */
-	int ASSOCIATION = 7;
-
-	/**
-	 * The feature id for the '<em><b>Nom Association</b></em>' attribute.
+	 * The feature id for the '<em><b>Type Donnee</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION__NOM_ASSOCIATION = 0;
+	int ASSOCIATION__TYPE_DONNEE = ELEMENT_DIAGRAMME__TYPE_DONNEE;
+
+	/**
+	 * The feature id for the '<em><b>Nom</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__NOM = ELEMENT_DIAGRAMME_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Cardinalites</b></em>' containment reference list.
@@ -458,7 +688,7 @@ public interface SmallumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION__CARDINALITES = 1;
+	int ASSOCIATION__CARDINALITES = ELEMENT_DIAGRAMME_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Association</em>' class.
@@ -467,7 +697,7 @@ public interface SmallumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_FEATURE_COUNT = 2;
+	int ASSOCIATION_FEATURE_COUNT = ELEMENT_DIAGRAMME_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Association</em>' class.
@@ -476,26 +706,43 @@ public interface SmallumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_OPERATION_COUNT = 0;
+	int ASSOCIATION_OPERATION_COUNT = ELEMENT_DIAGRAMME_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link smalluml.impl.CardinaliteImpl <em>Cardinalite</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see smalluml.impl.CardinaliteImpl
-	 * @see smalluml.impl.SmallumlPackageImpl#getCardinalite()
-	 * @generated
-	 */
-	int CARDINALITE = 8;
-
-	/**
-	 * The feature id for the '<em><b>Multiplicite</b></em>' attribute.
+	 * The feature id for the '<em><b>Nom</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDINALITE__MULTIPLICITE = 0;
+	int CARDINALITE__NOM = ELEMENT_NOMME__NOM;
+
+	/**
+	 * The feature id for the '<em><b>Multiplicite Inf</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDINALITE__MULTIPLICITE_INF = ELEMENT_NOMME_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Multiplicite Sup</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDINALITE__MULTIPLICITE_SUP = ELEMENT_NOMME_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Classe</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDINALITE__CLASSE = ELEMENT_NOMME_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Cardinalite</em>' class.
@@ -504,7 +751,7 @@ public interface SmallumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDINALITE_FEATURE_COUNT = 1;
+	int CARDINALITE_FEATURE_COUNT = ELEMENT_NOMME_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Cardinalite</em>' class.
@@ -513,26 +760,7 @@ public interface SmallumlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDINALITE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link smalluml.impl.ChaineImpl <em>Chaine</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see smalluml.impl.ChaineImpl
-	 * @see smalluml.impl.SmallumlPackageImpl#getChaine()
-	 * @generated
-	 */
-	int CHAINE = 9;
-
-	/**
-	 * The feature id for the '<em><b>Nom Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHAINE__NOM_TYPE = TYPE__NOM_TYPE;
+	int CARDINALITE_OPERATION_COUNT = ELEMENT_NOMME_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Chaine</em>' class.
@@ -553,25 +781,6 @@ public interface SmallumlPackage extends EPackage {
 	int CHAINE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link smalluml.impl.EntierImpl <em>Entier</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see smalluml.impl.EntierImpl
-	 * @see smalluml.impl.SmallumlPackageImpl#getEntier()
-	 * @generated
-	 */
-	int ENTIER = 10;
-
-	/**
-	 * The feature id for the '<em><b>Nom Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTIER__NOM_TYPE = TYPE__NOM_TYPE;
-
-	/**
 	 * The number of structural features of the '<em>Entier</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -588,25 +797,6 @@ public interface SmallumlPackage extends EPackage {
 	 * @ordered
 	 */
 	int ENTIER_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link smalluml.impl.BooleenImpl <em>Booleen</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see smalluml.impl.BooleenImpl
-	 * @see smalluml.impl.SmallumlPackageImpl#getBooleen()
-	 * @generated
-	 */
-	int BOOLEEN = 11;
-
-	/**
-	 * The feature id for the '<em><b>Nom Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEEN__NOM_TYPE = TYPE__NOM_TYPE;
 
 	/**
 	 * The number of structural features of the '<em>Booleen</em>' class.
@@ -626,6 +816,87 @@ public interface SmallumlPackage extends EPackage {
 	 */
 	int BOOLEEN_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
 
+	/**
+	 * The meta object id for the '{@link smalluml.impl.DiagrammeImpl <em>Diagramme</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see smalluml.impl.DiagrammeImpl
+	 * @see smalluml.impl.SmallumlPackageImpl#getDiagramme()
+	 * @generated
+	 */
+	int DIAGRAMME = 11;
+
+	/**
+	 * The feature id for the '<em><b>Classe</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIAGRAMME__CLASSE = ELEMENT_DIAGRAMME__CLASSE;
+
+	/**
+	 * The feature id for the '<em><b>Association</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIAGRAMME__ASSOCIATION = ELEMENT_DIAGRAMME__ASSOCIATION;
+
+	/**
+	 * The feature id for the '<em><b>Enumeration</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIAGRAMME__ENUMERATION = ELEMENT_DIAGRAMME__ENUMERATION;
+
+	/**
+	 * The feature id for the '<em><b>Type Donnee</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIAGRAMME__TYPE_DONNEE = ELEMENT_DIAGRAMME__TYPE_DONNEE;
+
+	/**
+	 * The feature id for the '<em><b>Nom</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIAGRAMME__NOM = ELEMENT_DIAGRAMME_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Elements Diagramme</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIAGRAMME__ELEMENTS_DIAGRAMME = ELEMENT_DIAGRAMME_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Diagramme</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIAGRAMME_FEATURE_COUNT = ELEMENT_DIAGRAMME_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Diagramme</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIAGRAMME_OPERATION_COUNT = ELEMENT_DIAGRAMME_OPERATION_COUNT + 0;
 
 	/**
 	 * Returns the meta object for class '{@link smalluml.Classe <em>Classe</em>}'.
@@ -636,17 +907,6 @@ public interface SmallumlPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getClasse();
-
-	/**
-	 * Returns the meta object for the attribute '{@link smalluml.Classe#getNomClasse <em>Nom Classe</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nom Classe</em>'.
-	 * @see smalluml.Classe#getNomClasse()
-	 * @see #getClasse()
-	 * @generated
-	 */
-	EAttribute getClasse_NomClasse();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link smalluml.Classe#getAttributs <em>Attributs</em>}'.
@@ -682,17 +942,6 @@ public interface SmallumlPackage extends EPackage {
 	EAttribute getClasse_Abstrait();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link smalluml.Classe#getCardinalites <em>Cardinalites</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Cardinalites</em>'.
-	 * @see smalluml.Classe#getCardinalites()
-	 * @see #getClasse()
-	 * @generated
-	 */
-	EReference getClasse_Cardinalites();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link smalluml.Classe#getSousClasses <em>Sous Classes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -715,6 +964,17 @@ public interface SmallumlPackage extends EPackage {
 	EReference getClasse_SuperClasse();
 
 	/**
+	 * Returns the meta object for the attribute '{@link smalluml.Classe#isClasseAbstraite <em>Classe Abstraite</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Classe Abstraite</em>'.
+	 * @see smalluml.Classe#isClasseAbstraite()
+	 * @see #getClasse()
+	 * @generated
+	 */
+	EAttribute getClasse_ClasseAbstraite();
+
+	/**
 	 * Returns the meta object for class '{@link smalluml.Attribut <em>Attribut</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -725,21 +985,10 @@ public interface SmallumlPackage extends EPackage {
 	EClass getAttribut();
 
 	/**
-	 * Returns the meta object for the attribute '{@link smalluml.Attribut#getNomAttribut <em>Nom Attribut</em>}'.
+	 * Returns the meta object for the containment reference '{@link smalluml.Attribut#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nom Attribut</em>'.
-	 * @see smalluml.Attribut#getNomAttribut()
-	 * @see #getAttribut()
-	 * @generated
-	 */
-	EAttribute getAttribut_NomAttribut();
-
-	/**
-	 * Returns the meta object for the reference '{@link smalluml.Attribut#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Type</em>'.
+	 * @return the meta object for the containment reference '<em>Type</em>'.
 	 * @see smalluml.Attribut#getType()
 	 * @see #getAttribut()
 	 * @generated
@@ -757,26 +1006,15 @@ public interface SmallumlPackage extends EPackage {
 	EClass getEnumeration();
 
 	/**
-	 * Returns the meta object for the attribute '{@link smalluml.Enumeration#getNomEnumeration <em>Nom Enumeration</em>}'.
+	 * Returns the meta object for the attribute list '{@link smalluml.Enumeration#getElements <em>Elements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nom Enumeration</em>'.
-	 * @see smalluml.Enumeration#getNomEnumeration()
-	 * @see #getEnumeration()
-	 * @generated
-	 */
-	EAttribute getEnumeration_NomEnumeration();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link smalluml.Enumeration#getElements <em>Elements</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Elements</em>'.
+	 * @return the meta object for the attribute list '<em>Elements</em>'.
 	 * @see smalluml.Enumeration#getElements()
 	 * @see #getEnumeration()
 	 * @generated
 	 */
-	EReference getEnumeration_Elements();
+	EAttribute getEnumeration_Elements();
 
 	/**
 	 * Returns the meta object for class '{@link smalluml.Methode <em>Methode</em>}'.
@@ -789,21 +1027,10 @@ public interface SmallumlPackage extends EPackage {
 	EClass getMethode();
 
 	/**
-	 * Returns the meta object for the attribute '{@link smalluml.Methode#getNomMethode <em>Nom Methode</em>}'.
+	 * Returns the meta object for the containment reference '{@link smalluml.Methode#getTypeDeRetour <em>Type De Retour</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nom Methode</em>'.
-	 * @see smalluml.Methode#getNomMethode()
-	 * @see #getMethode()
-	 * @generated
-	 */
-	EAttribute getMethode_NomMethode();
-
-	/**
-	 * Returns the meta object for the reference '{@link smalluml.Methode#getTypeDeRetour <em>Type De Retour</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Type De Retour</em>'.
+	 * @return the meta object for the containment reference '<em>Type De Retour</em>'.
 	 * @see smalluml.Methode#getTypeDeRetour()
 	 * @see #getMethode()
 	 * @generated
@@ -822,15 +1049,15 @@ public interface SmallumlPackage extends EPackage {
 	EReference getMethode_Parametres();
 
 	/**
-	 * Returns the meta object for the attribute '{@link smalluml.Methode#isAbstrait <em>Abstrait</em>}'.
+	 * Returns the meta object for the attribute '{@link smalluml.Methode#isMethodeAbstraite <em>Methode Abstraite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Abstrait</em>'.
-	 * @see smalluml.Methode#isAbstrait()
+	 * @return the meta object for the attribute '<em>Methode Abstraite</em>'.
+	 * @see smalluml.Methode#isMethodeAbstraite()
 	 * @see #getMethode()
 	 * @generated
 	 */
-	EAttribute getMethode_Abstrait();
+	EAttribute getMethode_MethodeAbstraite();
 
 	/**
 	 * Returns the meta object for class '{@link smalluml.Type <em>Type</em>}'.
@@ -841,17 +1068,6 @@ public interface SmallumlPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link smalluml.Type#getNomType <em>Nom Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nom Type</em>'.
-	 * @see smalluml.Type#getNomType()
-	 * @see #getType()
-	 * @generated
-	 */
-	EAttribute getType_NomType();
 
 	/**
 	 * Returns the meta object for class '{@link smalluml.TypeDonnee <em>Type Donnee</em>}'.
@@ -875,27 +1091,6 @@ public interface SmallumlPackage extends EPackage {
 	EReference getTypeDonnee_Attributs();
 
 	/**
-	 * Returns the meta object for class '{@link smalluml.Element <em>Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Element</em>'.
-	 * @see smalluml.Element
-	 * @generated
-	 */
-	EClass getElement();
-
-	/**
-	 * Returns the meta object for the attribute '{@link smalluml.Element#getNomElement <em>Nom Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nom Element</em>'.
-	 * @see smalluml.Element#getNomElement()
-	 * @see #getElement()
-	 * @generated
-	 */
-	EAttribute getElement_NomElement();
-
-	/**
 	 * Returns the meta object for class '{@link smalluml.Association <em>Association</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -904,17 +1099,6 @@ public interface SmallumlPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getAssociation();
-
-	/**
-	 * Returns the meta object for the attribute '{@link smalluml.Association#getNomAssociation <em>Nom Association</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nom Association</em>'.
-	 * @see smalluml.Association#getNomAssociation()
-	 * @see #getAssociation()
-	 * @generated
-	 */
-	EAttribute getAssociation_NomAssociation();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link smalluml.Association#getCardinalites <em>Cardinalites</em>}'.
@@ -938,15 +1122,37 @@ public interface SmallumlPackage extends EPackage {
 	EClass getCardinalite();
 
 	/**
-	 * Returns the meta object for the attribute '{@link smalluml.Cardinalite#getMultiplicite <em>Multiplicite</em>}'.
+	 * Returns the meta object for the attribute '{@link smalluml.Cardinalite#getMultipliciteInf <em>Multiplicite Inf</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Multiplicite</em>'.
-	 * @see smalluml.Cardinalite#getMultiplicite()
+	 * @return the meta object for the attribute '<em>Multiplicite Inf</em>'.
+	 * @see smalluml.Cardinalite#getMultipliciteInf()
 	 * @see #getCardinalite()
 	 * @generated
 	 */
-	EAttribute getCardinalite_Multiplicite();
+	EAttribute getCardinalite_MultipliciteInf();
+
+	/**
+	 * Returns the meta object for the attribute '{@link smalluml.Cardinalite#getMultipliciteSup <em>Multiplicite Sup</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Multiplicite Sup</em>'.
+	 * @see smalluml.Cardinalite#getMultipliciteSup()
+	 * @see #getCardinalite()
+	 * @generated
+	 */
+	EAttribute getCardinalite_MultipliciteSup();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link smalluml.Cardinalite#getClasse <em>Classe</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Classe</em>'.
+	 * @see smalluml.Cardinalite#getClasse()
+	 * @see #getCardinalite()
+	 * @generated
+	 */
+	EReference getCardinalite_Classe();
 
 	/**
 	 * Returns the meta object for class '{@link smalluml.Chaine <em>Chaine</em>}'.
@@ -977,6 +1183,102 @@ public interface SmallumlPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getBooleen();
+
+	/**
+	 * Returns the meta object for class '{@link smalluml.Diagramme <em>Diagramme</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Diagramme</em>'.
+	 * @see smalluml.Diagramme
+	 * @generated
+	 */
+	EClass getDiagramme();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link smalluml.Diagramme#getElementsDiagramme <em>Elements Diagramme</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Elements Diagramme</em>'.
+	 * @see smalluml.Diagramme#getElementsDiagramme()
+	 * @see #getDiagramme()
+	 * @generated
+	 */
+	EReference getDiagramme_ElementsDiagramme();
+
+	/**
+	 * Returns the meta object for class '{@link smalluml.ElementDiagramme <em>Element Diagramme</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Element Diagramme</em>'.
+	 * @see smalluml.ElementDiagramme
+	 * @generated
+	 */
+	EClass getElementDiagramme();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link smalluml.ElementDiagramme#getClasse <em>Classe</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Classe</em>'.
+	 * @see smalluml.ElementDiagramme#getClasse()
+	 * @see #getElementDiagramme()
+	 * @generated
+	 */
+	EReference getElementDiagramme_Classe();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link smalluml.ElementDiagramme#getAssociation <em>Association</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Association</em>'.
+	 * @see smalluml.ElementDiagramme#getAssociation()
+	 * @see #getElementDiagramme()
+	 * @generated
+	 */
+	EReference getElementDiagramme_Association();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link smalluml.ElementDiagramme#getEnumeration <em>Enumeration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Enumeration</em>'.
+	 * @see smalluml.ElementDiagramme#getEnumeration()
+	 * @see #getElementDiagramme()
+	 * @generated
+	 */
+	EReference getElementDiagramme_Enumeration();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link smalluml.ElementDiagramme#getTypeDonnee <em>Type Donnee</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Type Donnee</em>'.
+	 * @see smalluml.ElementDiagramme#getTypeDonnee()
+	 * @see #getElementDiagramme()
+	 * @generated
+	 */
+	EReference getElementDiagramme_TypeDonnee();
+
+	/**
+	 * Returns the meta object for class '{@link smalluml.ElementNomme <em>Element Nomme</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Element Nomme</em>'.
+	 * @see smalluml.ElementNomme
+	 * @generated
+	 */
+	EClass getElementNomme();
+
+	/**
+	 * Returns the meta object for the attribute '{@link smalluml.ElementNomme#getNom <em>Nom</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nom</em>'.
+	 * @see smalluml.ElementNomme#getNom()
+	 * @see #getElementNomme()
+	 * @generated
+	 */
+	EAttribute getElementNomme_Nom();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1012,14 +1314,6 @@ public interface SmallumlPackage extends EPackage {
 		EClass CLASSE = eINSTANCE.getClasse();
 
 		/**
-		 * The meta object literal for the '<em><b>Nom Classe</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CLASSE__NOM_CLASSE = eINSTANCE.getClasse_NomClasse();
-
-		/**
 		 * The meta object literal for the '<em><b>Attributs</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1044,14 +1338,6 @@ public interface SmallumlPackage extends EPackage {
 		EAttribute CLASSE__ABSTRAIT = eINSTANCE.getClasse_Abstrait();
 
 		/**
-		 * The meta object literal for the '<em><b>Cardinalites</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CLASSE__CARDINALITES = eINSTANCE.getClasse_Cardinalites();
-
-		/**
 		 * The meta object literal for the '<em><b>Sous Classes</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1068,6 +1354,14 @@ public interface SmallumlPackage extends EPackage {
 		EReference CLASSE__SUPER_CLASSE = eINSTANCE.getClasse_SuperClasse();
 
 		/**
+		 * The meta object literal for the '<em><b>Classe Abstraite</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CLASSE__CLASSE_ABSTRAITE = eINSTANCE.getClasse_ClasseAbstraite();
+
+		/**
 		 * The meta object literal for the '{@link smalluml.impl.AttributImpl <em>Attribut</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1078,15 +1372,7 @@ public interface SmallumlPackage extends EPackage {
 		EClass ATTRIBUT = eINSTANCE.getAttribut();
 
 		/**
-		 * The meta object literal for the '<em><b>Nom Attribut</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ATTRIBUT__NOM_ATTRIBUT = eINSTANCE.getAttribut_NomAttribut();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1104,20 +1390,12 @@ public interface SmallumlPackage extends EPackage {
 		EClass ENUMERATION = eINSTANCE.getEnumeration();
 
 		/**
-		 * The meta object literal for the '<em><b>Nom Enumeration</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Elements</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ENUMERATION__NOM_ENUMERATION = eINSTANCE.getEnumeration_NomEnumeration();
-
-		/**
-		 * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENUMERATION__ELEMENTS = eINSTANCE.getEnumeration_Elements();
+		EAttribute ENUMERATION__ELEMENTS = eINSTANCE.getEnumeration_Elements();
 
 		/**
 		 * The meta object literal for the '{@link smalluml.impl.MethodeImpl <em>Methode</em>}' class.
@@ -1130,15 +1408,7 @@ public interface SmallumlPackage extends EPackage {
 		EClass METHODE = eINSTANCE.getMethode();
 
 		/**
-		 * The meta object literal for the '<em><b>Nom Methode</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute METHODE__NOM_METHODE = eINSTANCE.getMethode_NomMethode();
-
-		/**
-		 * The meta object literal for the '<em><b>Type De Retour</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Type De Retour</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1154,12 +1424,12 @@ public interface SmallumlPackage extends EPackage {
 		EReference METHODE__PARAMETRES = eINSTANCE.getMethode_Parametres();
 
 		/**
-		 * The meta object literal for the '<em><b>Abstrait</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Methode Abstraite</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute METHODE__ABSTRAIT = eINSTANCE.getMethode_Abstrait();
+		EAttribute METHODE__METHODE_ABSTRAITE = eINSTANCE.getMethode_MethodeAbstraite();
 
 		/**
 		 * The meta object literal for the '{@link smalluml.impl.TypeImpl <em>Type</em>}' class.
@@ -1170,14 +1440,6 @@ public interface SmallumlPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TYPE = eINSTANCE.getType();
-
-		/**
-		 * The meta object literal for the '<em><b>Nom Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TYPE__NOM_TYPE = eINSTANCE.getType_NomType();
 
 		/**
 		 * The meta object literal for the '{@link smalluml.impl.TypeDonneeImpl <em>Type Donnee</em>}' class.
@@ -1198,24 +1460,6 @@ public interface SmallumlPackage extends EPackage {
 		EReference TYPE_DONNEE__ATTRIBUTS = eINSTANCE.getTypeDonnee_Attributs();
 
 		/**
-		 * The meta object literal for the '{@link smalluml.impl.ElementImpl <em>Element</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see smalluml.impl.ElementImpl
-		 * @see smalluml.impl.SmallumlPackageImpl#getElement()
-		 * @generated
-		 */
-		EClass ELEMENT = eINSTANCE.getElement();
-
-		/**
-		 * The meta object literal for the '<em><b>Nom Element</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ELEMENT__NOM_ELEMENT = eINSTANCE.getElement_NomElement();
-
-		/**
 		 * The meta object literal for the '{@link smalluml.impl.AssociationImpl <em>Association</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1224,14 +1468,6 @@ public interface SmallumlPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ASSOCIATION = eINSTANCE.getAssociation();
-
-		/**
-		 * The meta object literal for the '<em><b>Nom Association</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ASSOCIATION__NOM_ASSOCIATION = eINSTANCE.getAssociation_NomAssociation();
 
 		/**
 		 * The meta object literal for the '<em><b>Cardinalites</b></em>' containment reference list feature.
@@ -1252,12 +1488,28 @@ public interface SmallumlPackage extends EPackage {
 		EClass CARDINALITE = eINSTANCE.getCardinalite();
 
 		/**
-		 * The meta object literal for the '<em><b>Multiplicite</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Multiplicite Inf</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CARDINALITE__MULTIPLICITE = eINSTANCE.getCardinalite_Multiplicite();
+		EAttribute CARDINALITE__MULTIPLICITE_INF = eINSTANCE.getCardinalite_MultipliciteInf();
+
+		/**
+		 * The meta object literal for the '<em><b>Multiplicite Sup</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CARDINALITE__MULTIPLICITE_SUP = eINSTANCE.getCardinalite_MultipliciteSup();
+
+		/**
+		 * The meta object literal for the '<em><b>Classe</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CARDINALITE__CLASSE = eINSTANCE.getCardinalite_Classe();
 
 		/**
 		 * The meta object literal for the '{@link smalluml.impl.ChaineImpl <em>Chaine</em>}' class.
@@ -1288,6 +1540,84 @@ public interface SmallumlPackage extends EPackage {
 		 * @generated
 		 */
 		EClass BOOLEEN = eINSTANCE.getBooleen();
+
+		/**
+		 * The meta object literal for the '{@link smalluml.impl.DiagrammeImpl <em>Diagramme</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see smalluml.impl.DiagrammeImpl
+		 * @see smalluml.impl.SmallumlPackageImpl#getDiagramme()
+		 * @generated
+		 */
+		EClass DIAGRAMME = eINSTANCE.getDiagramme();
+
+		/**
+		 * The meta object literal for the '<em><b>Elements Diagramme</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DIAGRAMME__ELEMENTS_DIAGRAMME = eINSTANCE.getDiagramme_ElementsDiagramme();
+
+		/**
+		 * The meta object literal for the '{@link smalluml.impl.ElementDiagrammeImpl <em>Element Diagramme</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see smalluml.impl.ElementDiagrammeImpl
+		 * @see smalluml.impl.SmallumlPackageImpl#getElementDiagramme()
+		 * @generated
+		 */
+		EClass ELEMENT_DIAGRAMME = eINSTANCE.getElementDiagramme();
+
+		/**
+		 * The meta object literal for the '<em><b>Classe</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ELEMENT_DIAGRAMME__CLASSE = eINSTANCE.getElementDiagramme_Classe();
+
+		/**
+		 * The meta object literal for the '<em><b>Association</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ELEMENT_DIAGRAMME__ASSOCIATION = eINSTANCE.getElementDiagramme_Association();
+
+		/**
+		 * The meta object literal for the '<em><b>Enumeration</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ELEMENT_DIAGRAMME__ENUMERATION = eINSTANCE.getElementDiagramme_Enumeration();
+
+		/**
+		 * The meta object literal for the '<em><b>Type Donnee</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ELEMENT_DIAGRAMME__TYPE_DONNEE = eINSTANCE.getElementDiagramme_TypeDonnee();
+
+		/**
+		 * The meta object literal for the '{@link smalluml.impl.ElementNommeImpl <em>Element Nomme</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see smalluml.impl.ElementNommeImpl
+		 * @see smalluml.impl.SmallumlPackageImpl#getElementNomme()
+		 * @generated
+		 */
+		EClass ELEMENT_NOMME = eINSTANCE.getElementNomme();
+
+		/**
+		 * The meta object literal for the '<em><b>Nom</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ELEMENT_NOMME__NOM = eINSTANCE.getElementNomme_Nom();
 
 	}
 

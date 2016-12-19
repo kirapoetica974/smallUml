@@ -3,15 +3,13 @@
  */
 package org.smalluml;
 
-import org.smalluml.SmallUMLStandaloneSetupGenerated;
-
 /**
  * Initialization support for running Xtext languages without Equinox extension registry.
  */
 @SuppressWarnings("all")
-public class SmallUMLStandaloneSetup extends SmallUMLStandaloneSetupGenerated {
+public class SmallUMLStandaloneSetup /* implements SmallUMLStandaloneSetupGenerated  */{
   public static void doSetup() {
-    SmallUMLStandaloneSetup _smallUMLStandaloneSetup = new SmallUMLStandaloneSetup();
-    _smallUMLStandaloneSetup.createInjectorAndDoEMFRegistration();
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method createInjectorAndDoEMFRegistration() is undefined for the type SmallUMLStandaloneSetup");
   }
 }

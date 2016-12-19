@@ -3,8 +3,6 @@
  */
 package org.smalluml.scoping;
 
-import org.smalluml.scoping.AbstractSmallUMLScopeProvider;
-
 /**
  * This class contains custom scoping description.
  * 
@@ -12,5 +10,5 @@ import org.smalluml.scoping.AbstractSmallUMLScopeProvider;
  * on how and when to use it.
  */
 @SuppressWarnings("all")
-public class SmallUMLScopeProvider extends AbstractSmallUMLScopeProvider {
+public class SmallUMLScopeProvider /* implements AbstractSmallUMLScopeProvider  */{
 }

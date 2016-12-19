@@ -5,14 +5,9 @@ package smalluml.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
 import smalluml.*;
-import smalluml.SmallumlFactory;
-import smalluml.SmallumlPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -62,14 +57,13 @@ public class SmallumlFactoryImpl extends EFactoryImpl implements SmallumlFactory
 			case SmallumlPackage.ATTRIBUT: return createAttribut();
 			case SmallumlPackage.ENUMERATION: return createEnumeration();
 			case SmallumlPackage.METHODE: return createMethode();
-			case SmallumlPackage.TYPE: return createType();
 			case SmallumlPackage.TYPE_DONNEE: return createTypeDonnee();
-			case SmallumlPackage.ELEMENT: return createElement();
 			case SmallumlPackage.ASSOCIATION: return createAssociation();
 			case SmallumlPackage.CARDINALITE: return createCardinalite();
 			case SmallumlPackage.CHAINE: return createChaine();
 			case SmallumlPackage.ENTIER: return createEntier();
 			case SmallumlPackage.BOOLEEN: return createBooleen();
+			case SmallumlPackage.DIAGRAMME: return createDiagramme();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -120,29 +114,9 @@ public class SmallumlFactoryImpl extends EFactoryImpl implements SmallumlFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Type createType() {
-		TypeImpl type = new TypeImpl();
-		return type;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public TypeDonnee createTypeDonnee() {
 		TypeDonneeImpl typeDonnee = new TypeDonneeImpl();
 		return typeDonnee;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Element createElement() {
-		ElementImpl element = new ElementImpl();
-		return element;
 	}
 
 	/**
@@ -193,6 +167,16 @@ public class SmallumlFactoryImpl extends EFactoryImpl implements SmallumlFactory
 	public Booleen createBooleen() {
 		BooleenImpl booleen = new BooleenImpl();
 		return booleen;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Diagramme createDiagramme() {
+		DiagrammeImpl diagramme = new DiagrammeImpl();
+		return diagramme;
 	}
 
 	/**

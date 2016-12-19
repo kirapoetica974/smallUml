@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml.classification="http:///uml/classification.ecore" xmlns:uml.packages="http:///uml/packages.ecore" xmlns:uml.simpleClassifiers="http:///uml/simpleClassifiers.ecore" xmlns:uml.structuredClassifiers="http:///uml/structuredClassifiers.ecore" xmlns:uml.values="http:///uml/values.ecore">
+  <uml.simpleClassifiers:PrimitiveType name="Chaine"/>
+  <uml.simpleClassifiers:PrimitiveType name="Entier"/>
+  <uml.packages:Package name="Ma_Moto_Me_Manque">
+    <packagedElement xsi:type="uml.structuredClassifiers:Class" name="vehicule">
+      <ownedAttribute name="Immatriculation" type="/0"/>
+    </packagedElement>
+    <packagedElement xsi:type="uml.structuredClassifiers:Class" name="moto">
+      <ownedOperation name="rouler">
+        <ownedParameter xsi:type="uml.classification:Property" name="nbKm" type="/1"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xsi:type="uml.simpleClassifiers:Enumeration" name="Cylindree">
+      <ownedAttribute name="Bicylindree"/>
+      <ownedAttribute name="Monocylindree"/>
+    </packagedElement>
+    <packagedElement xsi:type="uml.structuredClassifiers:Association" name="etre" memberEnd="/3 /4"/>
+  </uml.packages:Package>
+  <uml.classification:Property name="motoEst" association="/2/@packagedElement.3">
+    <lowerValue xsi:type="uml.values:LiteralString" name="LowerBound" value="1"/>
+    <upperValue xsi:type="uml.values:LiteralString" name="UpperBound" value="1"/>
+  </uml.classification:Property>
+  <uml.classification:Property name="estVehicule" association="/2/@packagedElement.3">
+    <lowerValue xsi:type="uml.values:LiteralString" name="LowerBound" value="0"/>
+    <upperValue xsi:type="uml.values:LiteralString" name="UpperBound" value="-1"/>
+  </uml.classification:Property>
+</xmi:XMI>

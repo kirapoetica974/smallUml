@@ -58,15 +58,6 @@ public interface SmallumlFactory extends EFactory {
 	Methode createMethode();
 
 	/**
-	 * Returns a new object of class '<em>Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Type</em>'.
-	 * @generated
-	 */
-	Type createType();
-
-	/**
 	 * Returns a new object of class '<em>Type Donnee</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -74,15 +65,6 @@ public interface SmallumlFactory extends EFactory {
 	 * @generated
 	 */
 	TypeDonnee createTypeDonnee();
-
-	/**
-	 * Returns a new object of class '<em>Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Element</em>'.
-	 * @generated
-	 */
-	Element createElement();
 
 	/**
 	 * Returns a new object of class '<em>Association</em>'.
@@ -128,6 +110,15 @@ public interface SmallumlFactory extends EFactory {
 	 * @generated
 	 */
 	Booleen createBooleen();
+
+	/**
+	 * Returns a new object of class '<em>Diagramme</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Diagramme</em>'.
+	 * @generated
+	 */
+	Diagramme createDiagramme();
 
 	/**
 	 * Returns the package supported by this factory.

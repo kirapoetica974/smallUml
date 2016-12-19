@@ -4,3 +4,136 @@
 module Small2UML;
 create OUT : MM1 from IN : MM;
 
+rule booleen {
+	from
+		x : MM!Booleen
+	to 
+		y : MM1!PrimitiveType (
+			name <- 'Booleen'
+		)
+}
+
+rule chaine {
+	from
+		x : MM!Chaine
+	to 
+		y : MM1!PrimitiveType (
+			name <- 'Chaine'	
+		)
+}
+
+rule entier {
+	from
+		x : MM!Entier
+	to 
+		y : MM1!PrimitiveType (
+			name <- 'Entier'	
+		)
+}
+
+rule enumeration {
+	from
+		x : MM!Enumeration
+	to 
+		y : MM1!Enumeration (
+			name <- x.nom,
+			ownedAttribute <- x.elements->collect(e | thisModule.stringToProperty(e))
+		)
+}
+
+lazy rule stringToProperty{
+	from
+		x : String
+	to 
+		y : MM1!Property(
+		name <- x
+		)
+}
+
+rule methode {
+	from
+		x : MM!Methode
+	to 
+		y : MM1!Operation (			
+			type <- x.typeDeRetour,			
+			name <- x.nom,
+			ownedParameter <- x.parametres
+			-- abstraite ?
+		)
+}
+
+rule attribut {
+	from
+		x : MM!Attribut
+	to 
+		y : MM1!Property (
+			name <- x.nom,
+			type <- x.type			
+		)
+}
+
+rule classe {
+	from
+		x : MM!Classe
+	to 
+		y : MM1!Class (
+			name <- x.nom,
+			ownedAttribute <- x.attributs,
+			ownedOperation <- x.methodes,
+			isAbstract <- x.abstrait,
+			superClass <- x.superClasse
+			-- roles
+		)
+}
+
+rule diagramme {
+	from
+		x : MM!Diagramme
+	to
+		y : MM1!Package (
+			name <- x.nom,
+			packagedElement <- x.elementsDiagramme
+		)
+}
+
+rule association {
+	from
+		x : MM!Association
+	to
+		y : MM1!Association (
+			name <- x.nom,
+			memberEnd <- x.cardinalites->collect(e | thisModule.cardinalite2Role(e))
+		)
+}
+lazy rule cardinalite2Role {
+	from
+		x : MM!Cardinalite
+	to
+		y : MM1!Property (
+			name <- x.nom,
+			--type <- x.,
+			lowerValue <- thisModule.int2LowerBound(x.multipliciteInf),
+			upperValue <- thisModule.int2UpperBound(x.multipliciteSup)
+		)
+}
+
+lazy rule int2LowerBound {
+	from
+		x : String
+	to
+		y : MM1!LiteralString (
+			name <- 'LowerBound',
+			value <- x
+		)
+}
+
+lazy rule int2UpperBound {
+	from
+		x : String
+	to
+		y : MM1!LiteralString (
+			name <- 'UpperBound',
+			value <- x
+		)
+}
+

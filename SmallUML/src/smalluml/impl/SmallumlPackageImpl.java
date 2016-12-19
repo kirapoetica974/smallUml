@@ -5,17 +5,17 @@ package smalluml.impl;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import smalluml.Association;
 import smalluml.Attribut;
 import smalluml.Booleen;
 import smalluml.Cardinalite;
 import smalluml.Chaine;
 import smalluml.Classe;
-import smalluml.Element;
+import smalluml.Diagramme;
+import smalluml.ElementDiagramme;
+import smalluml.ElementNomme;
 import smalluml.Entier;
 import smalluml.Enumeration;
 import smalluml.Methode;
@@ -72,12 +72,6 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass elementEClass = null;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass associationEClass = null;
 	/**
 	 * <!-- begin-user-doc -->
@@ -103,6 +97,24 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 	 * @generated
 	 */
 	private EClass booleenEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass diagrammeEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass elementDiagrammeEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass elementNommeEClass = null;
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
@@ -178,17 +190,8 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getClasse_NomClasse() {
-		return (EAttribute)classeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getClasse_Attributs() {
-		return (EReference)classeEClass.getEStructuralFeatures().get(1);
+		return (EReference)classeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -197,7 +200,7 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 	 * @generated
 	 */
 	public EReference getClasse_Methodes() {
-		return (EReference)classeEClass.getEStructuralFeatures().get(2);
+		return (EReference)classeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -206,16 +209,7 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 	 * @generated
 	 */
 	public EAttribute getClasse_Abstrait() {
-		return (EAttribute)classeEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getClasse_Cardinalites() {
-		return (EReference)classeEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)classeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -224,7 +218,7 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 	 * @generated
 	 */
 	public EReference getClasse_SousClasses() {
-		return (EReference)classeEClass.getEStructuralFeatures().get(5);
+		return (EReference)classeEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -233,7 +227,16 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 	 * @generated
 	 */
 	public EReference getClasse_SuperClasse() {
-		return (EReference)classeEClass.getEStructuralFeatures().get(6);
+		return (EReference)classeEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getClasse_ClasseAbstraite() {
+		return (EAttribute)classeEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -250,17 +253,8 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAttribut_NomAttribut() {
-		return (EAttribute)attributEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getAttribut_Type() {
-		return (EReference)attributEClass.getEStructuralFeatures().get(1);
+		return (EReference)attributEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -277,17 +271,8 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getEnumeration_NomEnumeration() {
+	public EAttribute getEnumeration_Elements() {
 		return (EAttribute)enumerationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getEnumeration_Elements() {
-		return (EReference)enumerationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -304,17 +289,8 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMethode_NomMethode() {
-		return (EAttribute)methodeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getMethode_TypeDeRetour() {
-		return (EReference)methodeEClass.getEStructuralFeatures().get(1);
+		return (EReference)methodeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -323,7 +299,7 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 	 * @generated
 	 */
 	public EReference getMethode_Parametres() {
-		return (EReference)methodeEClass.getEStructuralFeatures().get(2);
+		return (EReference)methodeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -331,8 +307,8 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMethode_Abstrait() {
-		return (EAttribute)methodeEClass.getEStructuralFeatures().get(3);
+	public EAttribute getMethode_MethodeAbstraite() {
+		return (EAttribute)methodeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -342,15 +318,6 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 	 */
 	public EClass getType() {
 		return typeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getType_NomType() {
-		return (EAttribute)typeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -376,24 +343,6 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getElement() {
-		return elementEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getElement_NomElement() {
-		return (EAttribute)elementEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getAssociation() {
 		return associationEClass;
 	}
@@ -403,17 +352,8 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAssociation_NomAssociation() {
-		return (EAttribute)associationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getAssociation_Cardinalites() {
-		return (EReference)associationEClass.getEStructuralFeatures().get(1);
+		return (EReference)associationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -430,8 +370,26 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCardinalite_Multiplicite() {
+	public EAttribute getCardinalite_MultipliciteInf() {
 		return (EAttribute)cardinaliteEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCardinalite_MultipliciteSup() {
+		return (EAttribute)cardinaliteEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCardinalite_Classe() {
+		return (EReference)cardinaliteEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -466,6 +424,87 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getDiagramme() {
+		return diagrammeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDiagramme_ElementsDiagramme() {
+		return (EReference)diagrammeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getElementDiagramme() {
+		return elementDiagrammeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getElementDiagramme_Classe() {
+		return (EReference)elementDiagrammeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getElementDiagramme_Association() {
+		return (EReference)elementDiagrammeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getElementDiagramme_Enumeration() {
+		return (EReference)elementDiagrammeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getElementDiagramme_TypeDonnee() {
+		return (EReference)elementDiagrammeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getElementNomme() {
+		return elementNommeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getElementNomme_Nom() {
+		return (EAttribute)elementNommeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public SmallumlFactory getSmallumlFactory() {
 		return (SmallumlFactory)getEFactoryInstance();
 	}
@@ -490,49 +529,54 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 
 		// Create classes and their features
 		classeEClass = createEClass(CLASSE);
-		createEAttribute(classeEClass, CLASSE__NOM_CLASSE);
 		createEReference(classeEClass, CLASSE__ATTRIBUTS);
 		createEReference(classeEClass, CLASSE__METHODES);
 		createEAttribute(classeEClass, CLASSE__ABSTRAIT);
-		createEReference(classeEClass, CLASSE__CARDINALITES);
 		createEReference(classeEClass, CLASSE__SOUS_CLASSES);
 		createEReference(classeEClass, CLASSE__SUPER_CLASSE);
+		createEAttribute(classeEClass, CLASSE__CLASSE_ABSTRAITE);
 
 		attributEClass = createEClass(ATTRIBUT);
-		createEAttribute(attributEClass, ATTRIBUT__NOM_ATTRIBUT);
 		createEReference(attributEClass, ATTRIBUT__TYPE);
 
 		enumerationEClass = createEClass(ENUMERATION);
-		createEAttribute(enumerationEClass, ENUMERATION__NOM_ENUMERATION);
-		createEReference(enumerationEClass, ENUMERATION__ELEMENTS);
+		createEAttribute(enumerationEClass, ENUMERATION__ELEMENTS);
 
 		methodeEClass = createEClass(METHODE);
-		createEAttribute(methodeEClass, METHODE__NOM_METHODE);
 		createEReference(methodeEClass, METHODE__TYPE_DE_RETOUR);
 		createEReference(methodeEClass, METHODE__PARAMETRES);
-		createEAttribute(methodeEClass, METHODE__ABSTRAIT);
+		createEAttribute(methodeEClass, METHODE__METHODE_ABSTRAITE);
 
 		typeEClass = createEClass(TYPE);
-		createEAttribute(typeEClass, TYPE__NOM_TYPE);
 
 		typeDonneeEClass = createEClass(TYPE_DONNEE);
 		createEReference(typeDonneeEClass, TYPE_DONNEE__ATTRIBUTS);
 
-		elementEClass = createEClass(ELEMENT);
-		createEAttribute(elementEClass, ELEMENT__NOM_ELEMENT);
-
 		associationEClass = createEClass(ASSOCIATION);
-		createEAttribute(associationEClass, ASSOCIATION__NOM_ASSOCIATION);
 		createEReference(associationEClass, ASSOCIATION__CARDINALITES);
 
 		cardinaliteEClass = createEClass(CARDINALITE);
-		createEAttribute(cardinaliteEClass, CARDINALITE__MULTIPLICITE);
+		createEAttribute(cardinaliteEClass, CARDINALITE__MULTIPLICITE_INF);
+		createEAttribute(cardinaliteEClass, CARDINALITE__MULTIPLICITE_SUP);
+		createEReference(cardinaliteEClass, CARDINALITE__CLASSE);
 
 		chaineEClass = createEClass(CHAINE);
 
 		entierEClass = createEClass(ENTIER);
 
 		booleenEClass = createEClass(BOOLEEN);
+
+		diagrammeEClass = createEClass(DIAGRAMME);
+		createEReference(diagrammeEClass, DIAGRAMME__ELEMENTS_DIAGRAMME);
+
+		elementDiagrammeEClass = createEClass(ELEMENT_DIAGRAMME);
+		createEReference(elementDiagrammeEClass, ELEMENT_DIAGRAMME__CLASSE);
+		createEReference(elementDiagrammeEClass, ELEMENT_DIAGRAMME__ASSOCIATION);
+		createEReference(elementDiagrammeEClass, ELEMENT_DIAGRAMME__ENUMERATION);
+		createEReference(elementDiagrammeEClass, ELEMENT_DIAGRAMME__TYPE_DONNEE);
+
+		elementNommeEClass = createEClass(ELEMENT_NOMME);
+		createEAttribute(elementNommeEClass, ELEMENT_NOMME__NOM);
 	}
 
 	/**
@@ -563,57 +607,75 @@ public class SmallumlPackageImpl extends EPackageImpl implements SmallumlPackage
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		classeEClass.getESuperTypes().add(this.getElementDiagramme());
+		classeEClass.getESuperTypes().add(this.getElementNomme());
+		attributEClass.getESuperTypes().add(this.getElementNomme());
 		enumerationEClass.getESuperTypes().add(this.getType());
+		enumerationEClass.getESuperTypes().add(this.getElementDiagramme());
+		enumerationEClass.getESuperTypes().add(this.getElementNomme());
+		methodeEClass.getESuperTypes().add(this.getElementNomme());
 		typeDonneeEClass.getESuperTypes().add(this.getType());
+		typeDonneeEClass.getESuperTypes().add(this.getElementDiagramme());
+		typeDonneeEClass.getESuperTypes().add(this.getElementNomme());
+		associationEClass.getESuperTypes().add(this.getElementDiagramme());
+		associationEClass.getESuperTypes().add(this.getElementNomme());
+		cardinaliteEClass.getESuperTypes().add(this.getElementNomme());
 		chaineEClass.getESuperTypes().add(this.getType());
 		entierEClass.getESuperTypes().add(this.getType());
 		booleenEClass.getESuperTypes().add(this.getType());
+		diagrammeEClass.getESuperTypes().add(this.getElementDiagramme());
+		diagrammeEClass.getESuperTypes().add(this.getElementNomme());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(classeEClass, Classe.class, "Classe", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getClasse_NomClasse(), ecorePackage.getEString(), "nomClasse", null, 0, 1, Classe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getClasse_Attributs(), this.getAttribut(), null, "attributs", null, 0, -1, Classe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getClasse_Methodes(), this.getMethode(), null, "methodes", null, 0, -1, Classe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getClasse_Abstrait(), ecorePackage.getEBoolean(), "abstrait", null, 0, 1, Classe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getClasse_Cardinalites(), this.getCardinalite(), null, "cardinalites", null, 0, -1, Classe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getClasse_SousClasses(), this.getClasse(), null, "sousClasses", null, 0, -1, Classe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getClasse_SuperClasse(), this.getClasse(), null, "superClasse", null, 0, 1, Classe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClasse_ClasseAbstraite(), ecorePackage.getEBoolean(), "classeAbstraite", null, 0, 1, Classe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attributEClass, Attribut.class, "Attribut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAttribut_NomAttribut(), ecorePackage.getEString(), "nomAttribut", null, 0, 1, Attribut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAttribut_Type(), this.getType(), null, "type", null, 1, 1, Attribut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttribut_Type(), this.getType(), null, "type", null, 1, 1, Attribut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(enumerationEClass, Enumeration.class, "Enumeration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEnumeration_NomEnumeration(), ecorePackage.getEString(), "nomEnumeration", null, 0, 1, Enumeration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEnumeration_Elements(), this.getElement(), null, "elements", null, 1, -1, Enumeration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEnumeration_Elements(), ecorePackage.getEString(), "elements", null, 0, -1, Enumeration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(methodeEClass, Methode.class, "Methode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMethode_NomMethode(), ecorePackage.getEString(), "nomMethode", null, 0, 1, Methode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMethode_TypeDeRetour(), this.getType(), null, "typeDeRetour", null, 0, 1, Methode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMethode_TypeDeRetour(), this.getType(), null, "typeDeRetour", null, 0, 1, Methode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMethode_Parametres(), this.getAttribut(), null, "parametres", null, 0, -1, Methode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMethode_Abstrait(), ecorePackage.getEBoolean(), "abstrait", null, 0, 1, Methode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMethode_MethodeAbstraite(), ecorePackage.getEBoolean(), "methodeAbstraite", null, 0, 1, Methode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(typeEClass, Type.class, "Type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getType_NomType(), ecorePackage.getEString(), "nomType", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(typeEClass, Type.class, "Type", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(typeDonneeEClass, TypeDonnee.class, "TypeDonnee", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTypeDonnee_Attributs(), this.getAttribut(), null, "attributs", null, 0, -1, TypeDonnee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(elementEClass, Element.class, "Element", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getElement_NomElement(), ecorePackage.getEString(), "nomElement", null, 0, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(associationEClass, Association.class, "Association", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAssociation_NomAssociation(), ecorePackage.getEString(), "nomAssociation", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAssociation_Cardinalites(), this.getCardinalite(), null, "cardinalites", null, 2, -1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(cardinaliteEClass, Cardinalite.class, "Cardinalite", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCardinalite_Multiplicite(), ecorePackage.getEString(), "multiplicite", null, 0, 1, Cardinalite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCardinalite_MultipliciteInf(), ecorePackage.getEString(), "multipliciteInf", null, 0, 1, Cardinalite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCardinalite_MultipliciteSup(), ecorePackage.getEString(), "multipliciteSup", null, 0, 1, Cardinalite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCardinalite_Classe(), this.getClasse(), null, "classe", null, 0, 1, Cardinalite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(chaineEClass, Chaine.class, "Chaine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(entierEClass, Entier.class, "Entier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(booleenEClass, Booleen.class, "Booleen", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(diagrammeEClass, Diagramme.class, "Diagramme", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDiagramme_ElementsDiagramme(), this.getElementDiagramme(), null, "elementsDiagramme", null, 0, -1, Diagramme.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(elementDiagrammeEClass, ElementDiagramme.class, "ElementDiagramme", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getElementDiagramme_Classe(), this.getClasse(), null, "classe", null, 0, -1, ElementDiagramme.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getElementDiagramme_Association(), this.getAssociation(), null, "association", null, 0, -1, ElementDiagramme.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getElementDiagramme_Enumeration(), this.getEnumeration(), null, "enumeration", null, 0, -1, ElementDiagramme.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getElementDiagramme_TypeDonnee(), this.getTypeDonnee(), null, "typeDonnee", null, 0, -1, ElementDiagramme.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(elementNommeEClass, ElementNomme.class, "ElementNomme", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getElementNomme_Nom(), ecorePackage.getEString(), "nom", null, 0, 1, ElementNomme.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

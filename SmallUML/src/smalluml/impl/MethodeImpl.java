@@ -3,21 +3,14 @@
 package smalluml.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import smalluml.Attribut;
 import smalluml.Methode;
 import smalluml.SmallumlPackage;
@@ -31,37 +24,16 @@ import smalluml.Type;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link smalluml.impl.MethodeImpl#getNomMethode <em>Nom Methode</em>}</li>
  *   <li>{@link smalluml.impl.MethodeImpl#getTypeDeRetour <em>Type De Retour</em>}</li>
  *   <li>{@link smalluml.impl.MethodeImpl#getParametres <em>Parametres</em>}</li>
- *   <li>{@link smalluml.impl.MethodeImpl#isAbstrait <em>Abstrait</em>}</li>
+ *   <li>{@link smalluml.impl.MethodeImpl#isMethodeAbstraite <em>Methode Abstraite</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MethodeImpl extends MinimalEObjectImpl.Container implements Methode {
+public class MethodeImpl extends ElementNommeImpl implements Methode {
 	/**
-	 * The default value of the '{@link #getNomMethode() <em>Nom Methode</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNomMethode()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NOM_METHODE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getNomMethode() <em>Nom Methode</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNomMethode()
-	 * @generated
-	 * @ordered
-	 */
-	protected String nomMethode = NOM_METHODE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getTypeDeRetour() <em>Type De Retour</em>}' reference.
+	 * The cached value of the '{@link #getTypeDeRetour() <em>Type De Retour</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTypeDeRetour()
@@ -81,24 +53,24 @@ public class MethodeImpl extends MinimalEObjectImpl.Container implements Methode
 	protected EList<Attribut> parametres;
 
 	/**
-	 * The default value of the '{@link #isAbstrait() <em>Abstrait</em>}' attribute.
+	 * The default value of the '{@link #isMethodeAbstraite() <em>Methode Abstraite</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isAbstrait()
+	 * @see #isMethodeAbstraite()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean ABSTRAIT_EDEFAULT = false;
+	protected static final boolean METHODE_ABSTRAITE_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #isAbstrait() <em>Abstrait</em>}' attribute.
+	 * The cached value of the '{@link #isMethodeAbstraite() <em>Methode Abstraite</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isAbstrait()
+	 * @see #isMethodeAbstraite()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean abstrait = ABSTRAIT_EDEFAULT;
+	protected boolean methodeAbstraite = METHODE_ABSTRAITE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -124,36 +96,7 @@ public class MethodeImpl extends MinimalEObjectImpl.Container implements Methode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNomMethode() {
-		return nomMethode;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setNomMethode(String newNomMethode) {
-		String oldNomMethode = nomMethode;
-		nomMethode = newNomMethode;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SmallumlPackage.METHODE__NOM_METHODE, oldNomMethode, nomMethode));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Type getTypeDeRetour() {
-		if (typeDeRetour != null && typeDeRetour.eIsProxy()) {
-			InternalEObject oldTypeDeRetour = (InternalEObject)typeDeRetour;
-			typeDeRetour = (Type)eResolveProxy(oldTypeDeRetour);
-			if (typeDeRetour != oldTypeDeRetour) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SmallumlPackage.METHODE__TYPE_DE_RETOUR, oldTypeDeRetour, typeDeRetour));
-			}
-		}
 		return typeDeRetour;
 	}
 
@@ -162,8 +105,14 @@ public class MethodeImpl extends MinimalEObjectImpl.Container implements Methode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Type basicGetTypeDeRetour() {
-		return typeDeRetour;
+	public NotificationChain basicSetTypeDeRetour(Type newTypeDeRetour, NotificationChain msgs) {
+		Type oldTypeDeRetour = typeDeRetour;
+		typeDeRetour = newTypeDeRetour;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SmallumlPackage.METHODE__TYPE_DE_RETOUR, oldTypeDeRetour, newTypeDeRetour);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -172,10 +121,17 @@ public class MethodeImpl extends MinimalEObjectImpl.Container implements Methode
 	 * @generated
 	 */
 	public void setTypeDeRetour(Type newTypeDeRetour) {
-		Type oldTypeDeRetour = typeDeRetour;
-		typeDeRetour = newTypeDeRetour;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SmallumlPackage.METHODE__TYPE_DE_RETOUR, oldTypeDeRetour, typeDeRetour));
+		if (newTypeDeRetour != typeDeRetour) {
+			NotificationChain msgs = null;
+			if (typeDeRetour != null)
+				msgs = ((InternalEObject)typeDeRetour).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SmallumlPackage.METHODE__TYPE_DE_RETOUR, null, msgs);
+			if (newTypeDeRetour != null)
+				msgs = ((InternalEObject)newTypeDeRetour).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SmallumlPackage.METHODE__TYPE_DE_RETOUR, null, msgs);
+			msgs = basicSetTypeDeRetour(newTypeDeRetour, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SmallumlPackage.METHODE__TYPE_DE_RETOUR, newTypeDeRetour, newTypeDeRetour));
 	}
 
 	/**
@@ -195,8 +151,8 @@ public class MethodeImpl extends MinimalEObjectImpl.Container implements Methode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isAbstrait() {
-		return abstrait;
+	public boolean isMethodeAbstraite() {
+		return methodeAbstraite;
 	}
 
 	/**
@@ -204,11 +160,11 @@ public class MethodeImpl extends MinimalEObjectImpl.Container implements Methode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAbstrait(boolean newAbstrait) {
-		boolean oldAbstrait = abstrait;
-		abstrait = newAbstrait;
+	public void setMethodeAbstraite(boolean newMethodeAbstraite) {
+		boolean oldMethodeAbstraite = methodeAbstraite;
+		methodeAbstraite = newMethodeAbstraite;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SmallumlPackage.METHODE__ABSTRAIT, oldAbstrait, abstrait));
+			eNotify(new ENotificationImpl(this, Notification.SET, SmallumlPackage.METHODE__METHODE_ABSTRAITE, oldMethodeAbstraite, methodeAbstraite));
 	}
 
 	/**
@@ -219,6 +175,8 @@ public class MethodeImpl extends MinimalEObjectImpl.Container implements Methode
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case SmallumlPackage.METHODE__TYPE_DE_RETOUR:
+				return basicSetTypeDeRetour(null, msgs);
 			case SmallumlPackage.METHODE__PARAMETRES:
 				return ((InternalEList<?>)getParametres()).basicRemove(otherEnd, msgs);
 		}
@@ -233,15 +191,12 @@ public class MethodeImpl extends MinimalEObjectImpl.Container implements Methode
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SmallumlPackage.METHODE__NOM_METHODE:
-				return getNomMethode();
 			case SmallumlPackage.METHODE__TYPE_DE_RETOUR:
-				if (resolve) return getTypeDeRetour();
-				return basicGetTypeDeRetour();
+				return getTypeDeRetour();
 			case SmallumlPackage.METHODE__PARAMETRES:
 				return getParametres();
-			case SmallumlPackage.METHODE__ABSTRAIT:
-				return isAbstrait();
+			case SmallumlPackage.METHODE__METHODE_ABSTRAITE:
+				return isMethodeAbstraite();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -255,9 +210,6 @@ public class MethodeImpl extends MinimalEObjectImpl.Container implements Methode
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SmallumlPackage.METHODE__NOM_METHODE:
-				setNomMethode((String)newValue);
-				return;
 			case SmallumlPackage.METHODE__TYPE_DE_RETOUR:
 				setTypeDeRetour((Type)newValue);
 				return;
@@ -265,8 +217,8 @@ public class MethodeImpl extends MinimalEObjectImpl.Container implements Methode
 				getParametres().clear();
 				getParametres().addAll((Collection<? extends Attribut>)newValue);
 				return;
-			case SmallumlPackage.METHODE__ABSTRAIT:
-				setAbstrait((Boolean)newValue);
+			case SmallumlPackage.METHODE__METHODE_ABSTRAITE:
+				setMethodeAbstraite((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -280,17 +232,14 @@ public class MethodeImpl extends MinimalEObjectImpl.Container implements Methode
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SmallumlPackage.METHODE__NOM_METHODE:
-				setNomMethode(NOM_METHODE_EDEFAULT);
-				return;
 			case SmallumlPackage.METHODE__TYPE_DE_RETOUR:
 				setTypeDeRetour((Type)null);
 				return;
 			case SmallumlPackage.METHODE__PARAMETRES:
 				getParametres().clear();
 				return;
-			case SmallumlPackage.METHODE__ABSTRAIT:
-				setAbstrait(ABSTRAIT_EDEFAULT);
+			case SmallumlPackage.METHODE__METHODE_ABSTRAITE:
+				setMethodeAbstraite(METHODE_ABSTRAITE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -304,14 +253,12 @@ public class MethodeImpl extends MinimalEObjectImpl.Container implements Methode
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SmallumlPackage.METHODE__NOM_METHODE:
-				return NOM_METHODE_EDEFAULT == null ? nomMethode != null : !NOM_METHODE_EDEFAULT.equals(nomMethode);
 			case SmallumlPackage.METHODE__TYPE_DE_RETOUR:
 				return typeDeRetour != null;
 			case SmallumlPackage.METHODE__PARAMETRES:
 				return parametres != null && !parametres.isEmpty();
-			case SmallumlPackage.METHODE__ABSTRAIT:
-				return abstrait != ABSTRAIT_EDEFAULT;
+			case SmallumlPackage.METHODE__METHODE_ABSTRAITE:
+				return methodeAbstraite != METHODE_ABSTRAITE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -326,10 +273,8 @@ public class MethodeImpl extends MinimalEObjectImpl.Container implements Methode
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (nomMethode: ");
-		result.append(nomMethode);
-		result.append(", abstrait: ");
-		result.append(abstrait);
+		result.append(" (methodeAbstraite: ");
+		result.append(methodeAbstraite);
 		result.append(')');
 		return result.toString();
 	}
